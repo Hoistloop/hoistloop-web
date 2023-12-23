@@ -1,0 +1,8 @@
+{
+  "tabWidth": 2,
+  "quoteProps": "consistent",
+  "endOfLine": "crlf",
+  "singleAttributePerLine": true,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwingConfig": "./tailwind.config.js"
+}

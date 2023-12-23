@@ -1,0 +1,7 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Ext: Prettier - Code formatter
+  "editor.formatOnSave": true,
+  "files.associations": {
+    ".css": "postcss" // Ext: PostCSS Language Support
+  }
+}
