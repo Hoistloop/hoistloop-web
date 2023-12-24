@@ -2,11 +2,14 @@ import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import { Outlet, Router, Route, RootRoute } from "@tanstack/react-router";
 
 import Home from "@pages/Home";
+import PageLayout from "@components/PageLayout";
 
 const rootRoute = new RootRoute({
   component: () => (
     <>
-      <Outlet />
+      <PageLayout>
+        <Outlet />
+      </PageLayout>
       <TanStackRouterDevtools />
     </>
   ),
