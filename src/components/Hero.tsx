@@ -9,7 +9,7 @@ export default function Hero({
 }) {
   return (
     <section
-      className={`flex flex-col items-center gap-[6px] self-stretch px-[16px] py-[50px] md:gap-[10px] md:px-[250px] md:py-[100px] lg:gap-[14px] lg:px-[300px] lg:py-[120px]  ${
+      className={`flex flex-col items-center gap-1.5 self-stretch px-4 py-[50px] md:gap-2.5 md:px-[250px] md:py-[100px] lg:gap-3.5 lg:px-[300px] lg:py-[120px]  ${
         imageUrl &&
         `bg-[url('/hero-image.webp')] bg-cover bg-center bg-no-repeat grayscale`
       }`}
