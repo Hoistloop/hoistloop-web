@@ -18,6 +18,7 @@
     "@heroicons/react": "^2.1.1",
     "@tanstack/react-router": "^1.0.0",
     "@tanstack/router-devtools": "^1.0.0",
+    "eslint-plugin-tailwindcss": "^3.17.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

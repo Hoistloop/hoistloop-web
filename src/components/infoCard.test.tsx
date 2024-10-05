@@ -8,7 +8,7 @@ describe("components/InfoCard", () => {
     const { container } = render(
       <InfoCard
         description="this is a test content"
-        icon={<CursorArrowRippleIcon className="test-class" />}
+        icon={<CursorArrowRippleIcon className="border" />}
       />,
     );
 
@@ -17,6 +17,6 @@ describe("components/InfoCard", () => {
     ) as HTMLImageElement;
 
     expect(screen.getByText(/this is a test content/i)).toBeDefined();
-    expect(svg.classList.toString()).toContain("test-class");
+    expect(svg.classList.toString()).toContain("border");
   });
 });

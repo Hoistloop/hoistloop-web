@@ -4,7 +4,17 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "icon-gradient":
+          "linear-gradient(229deg, rgba(84,60,222,0.25) -76%, rgba(60,222,219,0.005) 31%), linear-gradient(180deg, #242424 0%, rgba(36,36,36,0) 100%)",
+      },
+      screens: {
+        desktop: "1920px",
+        laptop: "1440px",
+        mobile: "390px",
+      },
+    },
   },
   daisyui: {
     themes: [
