@@ -1,6 +1,6 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Hero from "@components/Hero";
+import Hero from "@components/Hero/Hero";
 
 describe("components/Hero", () => {
   test("renders component", () => {
