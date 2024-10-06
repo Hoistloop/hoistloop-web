@@ -10,6 +10,10 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    backgrounds: {
+      values: [{ name: "hoistloop", value: "#1E1E1E", appBg: "#1E1E1E" }],
+      default: "hoistloop",
+    },
   },
 };
 

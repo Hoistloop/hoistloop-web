@@ -14,6 +14,9 @@ export default {
         laptop: "1440px",
         mobile: "390px",
       },
+      colors: {
+        fill: "#242424",
+      },
     },
   },
   daisyui: {

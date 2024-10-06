@@ -12,7 +12,7 @@ describe("components/Icon", () => {
     expect(svg).toBeDefined();
     expect(
       (svg as SVGSVGElement).classList.contains(
-        "border-neutral-800 max-laptop:h-[70px] max-laptop:w-[70px] max-laptop:[&>svg]:h-[30px] max-mobile:h-[58px] max-mobile:w-[58px] max-mobile:[&>svg]:h-[26px] flex h-20 w-20 items-center justify-center rounded-xl border text-accent [&>svg]:h-10",
+        "border-neutral-800 max-laptop:size-[70px] max-laptop:[&>svg]:h-[30px] max-mobile:size-[58px] max-mobile:[&>svg]:h-[26px] flex h-20 w-20 items-center justify-center rounded-xl border text-accent [&>svg]:h-10",
       ),
     );
   });
