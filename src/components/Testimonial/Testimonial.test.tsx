@@ -6,7 +6,7 @@ describe("components/Testimonial", () => {
   test("renders Testimonial with heading, quote, and PersonCard", () => {
     render(
       <Testimonial
-        heading="SquareUp has been Instrumental"
+        heading="HoistLoop has been Instrumental"
         quote="Their expertise in web development has transformed our online presence."
         personCardProps={{
           name: "John Doe",
@@ -20,7 +20,7 @@ describe("components/Testimonial", () => {
     );
 
     // Check that the heading and quote are rendered correctly
-    expect(screen.getByText(/SquareUp has been Instrumental/i)).toBeDefined();
+    expect(screen.getByText(/HoistLoop has been Instrumental/i)).toBeDefined();
     expect(
       screen.getByText(
         /Their expertise in web development has transformed our online presence./i,

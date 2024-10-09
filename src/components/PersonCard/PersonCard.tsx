@@ -22,7 +22,7 @@ export default function PersonCard({
         src={imageSrc}
         alt={imageAltText}
       />
-      <figcaption className="flex gap-2.5">
+      <figcaption className="flex flex-1 justify-between">
         <div className="ml-[18px] flex flex-col justify-center">
           <p className="text-base font-medium text-white desktop:text-lg">
             {name}
@@ -33,6 +33,7 @@ export default function PersonCard({
           className="hidden items-center rounded-lg bg-neutral-800 px-5 py-[18px] font-medium text-white sm:flex laptop:text-sm desktop:text-lg"
           href={anchorHref}
           rel="noreferrer nofollow"
+          target="_blank"
         >
           {anchorText}
         </a>

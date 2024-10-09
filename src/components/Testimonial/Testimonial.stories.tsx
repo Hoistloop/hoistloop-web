@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     heading:
-      "SquareUp has been Instrumental in Transforming our Online Presence.",
+      "HoistLoop has been Instrumental in Transforming our Online Presence.",
     quote:
       "Their team's expertise in web development and design resulted in a visually stunning and user-friendly e-commerce platform. Our online sales have skyrocketed, and we couldn't be happier.",
     personCardProps: {
