@@ -1,3 +1,2 @@
 export { default } from "./AboutStep";
-
-export type { AboutProps } from "./AboutStep";
+export type { AboutStepProps } from "./AboutStep";
