@@ -1,6 +1,7 @@
 import { expect } from "vitest";
 import { render } from "@testing-library/react";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
+
 import Icon from "@components/Icon";
 
 describe("components/Icon", () => {

@@ -2,17 +2,17 @@ import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { CursorArrowRippleIcon } from "@heroicons/react/20/solid";
 
-import InfoCard from "@components/InfoCard";
+import ContactItem from "@components/ContactItem";
 
-describe("components/InfoCard", () => {
+describe("components/ContactItem", () => {
   test("render component", () => {
     render(
-      <InfoCard
-        description="this is a test content"
+      <ContactItem
+        text="hello@hoistloop"
         icon={<CursorArrowRippleIcon />}
       />,
     );
 
-    expect(screen.getByText(/this is a test content/i)).toBeDefined();
+    expect(screen.getByText(/hello@hoistloop/i)).toBeDefined();
   });
 });

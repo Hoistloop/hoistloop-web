@@ -1,23 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
 
-import InfoCard from "@components/InfoCard";
+import ContactItem from "@components/ContactItem";
 
 const meta = {
-  title: "InfoCard",
-  component: InfoCard,
+  title: "ContactItem",
+  component: ContactItem,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof InfoCard>;
+} satisfies Meta<typeof ContactItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    description: "Intuitive and Visually Appealing Interface Design",
     icon: <PaintBrushIcon />,
+    text: "hello@hoistloop.com",
   },
 };

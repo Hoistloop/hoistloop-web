@@ -1,13 +1,14 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Card from "./Card";
 import { CursorArrowRippleIcon } from "@heroicons/react/20/solid";
+
+import Card from "@components/Card";
 
 describe("components/Card", () => {
   test("render component", () => {
     render(
       <Card
-        icon={<CursorArrowRippleIcon className="border" />}
+        icon={<CursorArrowRippleIcon />}
         title="this is a test title"
         description="this is a test description"
         buttonText="text button"

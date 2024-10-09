@@ -16,6 +16,7 @@ export default {
       },
       colors: {
         fill: "#242424",
+        desc: "#E6E6E6",
       },
     },
   },

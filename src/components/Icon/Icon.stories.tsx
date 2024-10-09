@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
-import Icon from ".";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
+
+import Icon from "@components/Icon";
 
 const meta = {
   title: "Icon",

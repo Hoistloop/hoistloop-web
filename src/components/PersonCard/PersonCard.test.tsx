@@ -1,6 +1,7 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import PersonCard from "./PersonCard";
+
+import PersonCard from "@components/PersonCard";
 
 describe("components/PersonCard", () => {
   test("render component", () => {

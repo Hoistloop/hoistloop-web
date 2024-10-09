@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import TestimonialGroup from "./TestimonialGroup";
+import TestimonialGroup from "@components/TestimonialGroup";
 import Testimonial from "@components/Testimonial";
 
 const meta = {

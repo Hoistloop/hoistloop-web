@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { expect, describe, test } from "vitest";
-import Testimonial from "./Testimonial";
+
+import Testimonial from "@components/Testimonial";
 
 describe("components/Testimonial", () => {
   test("renders Testimonial with heading, quote, and PersonCard", () => {
