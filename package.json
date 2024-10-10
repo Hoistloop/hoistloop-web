@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install",
-    "test": "vitest run",
+    "test": "vitest run --coverage",
     "test:ui": "vitest --ui --coverage",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -62,3 +62,4 @@
     "vitest": "^0.34.6"
   }
 }
+
