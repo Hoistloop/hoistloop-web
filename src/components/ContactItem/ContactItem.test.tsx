@@ -1,7 +1,6 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { CursorArrowRippleIcon } from "@heroicons/react/20/solid";
-
 import ContactItem from "@components/ContactItem";
 
 describe("components/ContactItem", () => {

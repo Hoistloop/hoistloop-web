@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
-
 import CardGroup from "@components/CardGroup";
-import Card from "@components/Card/Card";
 
 const meta = {
   title: "CardGroup",
