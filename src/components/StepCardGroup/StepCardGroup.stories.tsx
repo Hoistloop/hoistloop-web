@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import StepCardGroup from "@components/StepCardGroup";
 
-StepCardGroup;
-
 const meta = {
   title: "StepCardGroup",
   component: StepCardGroup,
