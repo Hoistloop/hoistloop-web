@@ -8,10 +8,7 @@ export default function FAQGroup({ faqs }: { faqs: Array<FAQItemProps> }) {
       {faqs.map((faq) => (
         <FAQItem
           className="w-full odd:border-r odd:border-r-[#2E2E2E] even:border-l even:border-l-[#2E2E2E]"
-          key={faq.index}
-          index={faq.index}
-          question={faq.question}
-          response={faq.response}
+          {...faq}
         />
       ))}
     </div>
