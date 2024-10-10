@@ -1,7 +1,7 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { CursorArrowRippleIcon } from "@heroicons/react/20/solid";
-import ContactGroup from "./ContactGroup";
+import ContactGroup from "@components/ContactGroup";
 
 describe("components/ContactGroup", () => {
   test("render component", () => {

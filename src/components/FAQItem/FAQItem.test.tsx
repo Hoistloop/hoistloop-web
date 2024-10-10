@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import FAQItem from "./FAQItem";
+import FAQItem from "@components/FAQItem";
 
 describe("components/FAQItem", () => {
   test("renders component", () => {

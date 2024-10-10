@@ -1,6 +1,6 @@
 import Icon from "@components/Icon";
 
-interface CardProps {
+export interface CardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
