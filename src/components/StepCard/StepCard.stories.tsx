@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import AboutStep from "@components/AboutStep";
+import StepCard from "@components/StepCard";
 
 const meta = {
-  title: "AboutStep",
-  component: AboutStep,
+  title: "StepCard",
+  component: StepCard,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof AboutStep>;
+} satisfies Meta<typeof StepCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

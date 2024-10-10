@@ -1,11 +1,11 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import AboutStep from "@components/AboutStep";
+import StepCard from "@components/StepCard";
 
-describe("components/Card", () => {
+describe("components/StepCard", () => {
   test("render component", () => {
     render(
-      <AboutStep
+      <StepCard
         step="01"
         title="this is a test title"
         description="this is a test description"
