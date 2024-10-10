@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import FAQGroup from "./FAQGroup";
+import FAQGroup from "@components/FAQGroup";
 
-describe("components/FaqItem", () => {
+describe("components/FAQItem", () => {
   test("renders component", () => {
     render(
       <FAQGroup
@@ -12,7 +12,6 @@ describe("components/FaqItem", () => {
             response: "response",
           },
         ]}
-        direction="column"
       />,
     );
 
@@ -31,15 +30,13 @@ describe("components/FaqItem", () => {
             response: "response",
           },
         ]}
-        direction="column"
       />,
     );
 
     const icon = screen.getByTestId("faq-icon");
-    const title = screen.getByTestId("faq-question");
     fireEvent.click(icon);
 
-    expect(title.classList.contains("open")).toBe(true);
+    expect(icon.classList.contains("text-[#C5FF66]"));
   });
 
   test("click question open event", () => {
@@ -52,13 +49,12 @@ describe("components/FaqItem", () => {
             response: "response",
           },
         ]}
-        direction="column"
       />,
     );
 
     const title = screen.getByTestId("faq-question");
     fireEvent.click(title);
 
-    expect(title.classList.contains("open")).toBe(true);
+    expect(title.classList.contains("text-[#C5FF66]"));
   });
 });

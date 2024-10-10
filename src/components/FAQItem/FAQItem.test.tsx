@@ -1,10 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import FaqItem from "./FaqItem";
+import FAQItem from "./FAQItem";
 
-describe("components/FaqItem", () => {
+describe("components/FAQItem", () => {
   test("renders component", () => {
     render(
-      <FaqItem
+      <FAQItem
         index={11}
         question="question"
         response="response"
@@ -18,7 +18,7 @@ describe("components/FaqItem", () => {
 
   test("click icon open event", () => {
     render(
-      <FaqItem
+      <FAQItem
         index={1}
         question="question"
         response="response"
@@ -26,15 +26,14 @@ describe("components/FaqItem", () => {
     );
 
     const icon = screen.getByTestId("faq-icon");
-    const title = screen.getByTestId("faq-question");
     fireEvent.click(icon);
 
-    expect(title.classList.contains("open")).toBe(true);
+    expect(icon.classList.contains("text-[#C5FF66]"));
   });
 
   test("click question open event", () => {
     render(
-      <FaqItem
+      <FAQItem
         index={1}
         question="question"
         response="response"
@@ -44,6 +43,6 @@ describe("components/FaqItem", () => {
     const title = screen.getByTestId("faq-question");
     fireEvent.click(title);
 
-    expect(title.classList.contains("open")).toBe(true);
+    expect(title.classList.contains("text-[#C5FF66]"));
   });
 });

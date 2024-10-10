@@ -1,17 +1,19 @@
-import { PlusIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
+import { PlusIcon } from "@heroicons/react/20/solid";
 
-export default function FaqItem({
-  question,
-  response,
-  index,
-  className,
-}: {
+export interface FAQItemProps {
   className?: string;
   question: string;
   response: string;
   index: number;
-}) {
+}
+
+export default function FAQItem({
+  question,
+  response,
+  index,
+  className,
+}: FAQItemProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -35,8 +37,7 @@ export default function FaqItem({
         </div>
         <div className="flex flex-1 flex-col justify-center gap-y-5">
           <div
-            className={`cursor-pointer justify-center mobile:mt-0 mobile:text-base laptop:text-lg desktop:text-[22px]
-              ${open ? "open text-[#C5FF66]" : null}`}
+            className={`cursor-pointer justify-center mobile:mt-0 mobile:text-base laptop:text-lg desktop:text-[22px]`}
             onClick={() => setOpen(!open)}
             data-testid="faq-question"
           >

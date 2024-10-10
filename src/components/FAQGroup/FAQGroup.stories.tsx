@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import FAQGroup from "./FAQGroup";
+import FAQGroup from "@components/FAQGroup";
 
 const meta = {
   title: "FAQ Group",
@@ -35,6 +35,5 @@ export const Default: Story = {
           "SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.",
       },
     ],
-    direction: "column",
   },
 };

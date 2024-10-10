@@ -1,26 +1,12 @@
-import FaqItem from "@components/FAQ/FaqItem";
+import FAQItem, { type FAQItemProps } from "@components/FAQItem";
 
-type FAQ = {
-  index: number;
-  question: string;
-  response: string;
-};
-
-export default function FAQGroup({
-  faqs,
-  direction = "column",
-}: {
-  faqs: Array<FAQ>;
-  direction: "row" | "column";
-}) {
+export default function FAQGroup({ faqs }: { faqs: Array<FAQItemProps> }) {
   return (
     <div
-      className={`border border-[#2E2E2E] ${
-        direction === "column" ? "grid-cols-[auto_auto] items-start" : null
-      } mobile:grid-cols-1 desktop:grid`}
+      className={`grid grid-cols-1 border border-[#2E2E2E] laptop:grid-cols-2`}
     >
       {faqs.map((faq) => (
-        <FaqItem
+        <FAQItem
           className="w-full odd:border-r odd:border-r-[#2E2E2E] even:border-l even:border-l-[#2E2E2E]"
           key={faq.index}
           index={faq.index}
