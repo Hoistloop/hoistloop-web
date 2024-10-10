@@ -1,15 +1,18 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { CursorArrowRippleIcon } from "@heroicons/react/20/solid";
+import ContactGroup from "./ContactGroup";
 
-import ContactItem from "@components/ContactItem";
-
-describe("components/ContactItem", () => {
+describe("components/ContactGroup", () => {
   test("render component", () => {
     render(
-      <ContactItem
-        text="hello@hoistloop"
-        icon={<CursorArrowRippleIcon />}
+      <ContactGroup
+        contacts={[
+          {
+            text: "hello@hoistloop",
+            icon: <CursorArrowRippleIcon />,
+          },
+        ]}
       />,
     );
 
