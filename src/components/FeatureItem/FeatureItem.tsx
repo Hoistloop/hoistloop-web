@@ -4,6 +4,7 @@ export interface FeatureItemProps {
   icon: React.ReactNode;
   subtitle: string;
 }
+
 export default function FeatureItem({ icon, subtitle }: FeatureItemProps) {
   return (
     <div className="flex flex-1 flex-col gap-[30px] border-b border-r border-neutral-800 p-[50px] max-laptop:gap-6 max-laptop:p-10 max-mobile:gap-5 max-mobile:p-5 ">

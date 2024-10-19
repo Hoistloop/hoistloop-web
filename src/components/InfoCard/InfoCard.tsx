@@ -1,12 +1,11 @@
 import Icon from "@components/Icon";
 
-export default function InfoCard({
-  description,
-  icon,
-}: {
+export interface InfoCardProps {
   description: string;
   icon: React.ReactNode;
-}) {
+}
+
+export default function InfoCard({ description, icon }: InfoCardProps) {
   return (
     <article className="flex flex-[1_1_0] flex-col items-start gap-5 border border-neutral-800 p-5 laptop:gap-6 laptop:p-10 desktop:gap-[30px] desktop:p-[50px]">
       <Icon icon={icon} />

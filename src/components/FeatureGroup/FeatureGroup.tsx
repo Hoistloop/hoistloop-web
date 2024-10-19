@@ -1,14 +1,17 @@
 import FeatureItem, { type FeatureItemProps } from "@components/FeatureItem";
 
-export default function FeatureGroup({
-  featureItems,
-}: {
+export interface FeatureGroupProps {
   featureItems: Array<FeatureItemProps>;
-}) {
+}
+
+export default function FeatureGroup({ featureItems }: FeatureGroupProps) {
   return (
     <div className="flex border-l border-t border-neutral-800 max-laptop:flex max-mobile:grid max-mobile:grid-cols-2">
-      {featureItems.map((featureItem) => (
-        <FeatureItem {...featureItem} />
+      {featureItems.map((featureItem, idx) => (
+        <FeatureItem
+          {...featureItem}
+          key={`feature-item-${idx}`}
+        />
       ))}
     </div>
   );
