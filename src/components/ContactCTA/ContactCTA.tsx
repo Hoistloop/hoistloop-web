@@ -1,4 +1,4 @@
-export interface ContactCTA {
+export interface ContactCTAProps {
   imageSrc: string;
   title: string;
   subtitle: string;
@@ -14,7 +14,7 @@ export default function ContactCTA({
   subtitle,
   buttonText,
   contactHref,
-}: ContactCTA) {
+}: ContactCTAProps) {
   return (
     <section
       style={{ backgroundImage: `url(${imageUrl})` }}

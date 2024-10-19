@@ -1,12 +1,10 @@
-export default function Hero({
-  title,
-  subtitle,
-  imageUrl,
-}: {
+export interface HeroProps {
   title: string;
   subtitle: string;
   imageUrl?: string;
-}) {
+}
+
+export default function Hero({ title, subtitle, imageUrl }: HeroProps) {
   return (
     <section
       style={{ backgroundImage: `url(${imageUrl})` }}
