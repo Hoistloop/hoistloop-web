@@ -1,9 +1,9 @@
 export interface ContactCTA {
-  imageSrc?: string;
+  imageSrc: string;
   title: string;
   subtitle: string;
   buttonText: string;
-  imageUrl?: string;
+  imageUrl: string;
   contactHref: string;
 }
 
@@ -18,8 +18,9 @@ export default function ContactCTA({
   return (
     <section
       style={{ backgroundImage: `url(${imageUrl})` }}
-      className={`flex flex-col  items-center gap-[50px] px-[350px] py-[120px] max-laptop:gap-10 max-laptop:px-[250px] max-laptop:py-[100px] max-mobile:gap-7 max-mobile:px-4 max-mobile:py-[50px]${imageUrl && `bg-cover bg-center bg-no-repeat`
-        }`}
+      className={`flex flex-col  items-center gap-[50px] px-[350px] py-[120px] max-laptop:gap-10 max-laptop:px-[250px] max-laptop:py-[100px] max-mobile:gap-7 max-mobile:px-4 max-mobile:py-[50px]${
+        imageUrl && `bg-cover bg-center bg-no-repeat`
+      }`}
     >
       <img
         className="size-20 rounded-[12px] object-cover max-laptop:size-[60px] max-laptop:rounded-[10px] max-mobile:size-[50px] max-mobile:rounded-[7px]"
