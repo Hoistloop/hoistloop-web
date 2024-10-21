@@ -1,8 +1,16 @@
-import routes from "constants/routes";
-import logo from "../../assets/hoistloop-logo.png";
-import { Link, useRouterState } from "@tanstack/react-router";
+// Vendor
 import { useState } from "react";
+import { Link, useRouterState } from "@tanstack/react-router";
+
+// Components
 import MobileIconMenu from "@components/MobileIconMenu/MobileIconMenu";
+
+// Assets
+import logo from "../../assets/hoistloop-logo.png";
+
+// Consts
+import routes from "constants/routes";
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const router = useRouterState();
