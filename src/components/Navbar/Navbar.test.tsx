@@ -1,10 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, expect } from "vitest";
 import { PartialStoryFn, StoryContext } from "@storybook/csf";
 
 import withRouter from "@components/RouterWrapper";
-
-const TestComponent = () => <div>Test Component</div>;
+import Navbar from "./Navbar";
 
 const renderWithRouter = (
   Story: PartialStoryFn,
@@ -13,28 +12,24 @@ const renderWithRouter = (
   return render(withRouter(Story, context));
 };
 
-describe("withRouter Decorator", () => {
-  test("renders the Story component correctly with default initialEntries", () => {
+describe("Navbar withRouter Decorator", () => {
+  test("Render button contact", () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    renderWithRouter(() => <TestComponent />, { parameters: {} });
+    renderWithRouter(() => <Navbar />);
 
-    expect(screen.getByText("Test Component")).toBeDefined();
+    expect(screen.getByText("Contact")).toBeDefined();
+    expect(screen.getByText("Home")).toBeDefined();
+    expect(screen.getByText("Services")).toBeDefined();
   });
 
-  test("renders the Story component with multiple routes", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    const context: StoryContext = {
-      parameters: {
-        router: {
-          routes: ["/", "/another"],
-        },
-      },
-    };
+  test("Render button mobile", () => {
+    renderWithRouter(() => <Navbar />);
 
-    renderWithRouter(() => <TestComponent />, context);
+    const button = screen.getByTestId("mobile-menu-button");
 
-    expect(screen.getByText("Test Component")).toBeDefined();
+    fireEvent.click(button);
+
+    expect(screen.getByText("Home")).toBeDefined();
   });
 });
