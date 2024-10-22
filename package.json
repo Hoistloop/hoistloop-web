@@ -20,7 +20,8 @@
     "@tanstack/router-devtools": "^1.0.0",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-range": "^1.10.0"
   },
   "devDependencies": {
     "@storybook/addon-backgrounds": "7.6.6",

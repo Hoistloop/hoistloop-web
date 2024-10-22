@@ -4,5 +4,8 @@
   "prettier.configPath": "./prettier.config.mjs",
   "files.associations": {
     ".css": "postcss" // Ext: PostCSS Language Support
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }
