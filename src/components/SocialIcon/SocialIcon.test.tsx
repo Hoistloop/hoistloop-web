@@ -6,7 +6,12 @@ import SocialIcon from "@components/SocialIcon";
 
 describe("components/SocialIcon", () => {
   test("renders component", () => {
-    const { container } = render(<SocialIcon icon={<PaintBrushIcon />} />);
+    const { container } = render(
+      <SocialIcon
+        icon={<PaintBrushIcon />}
+        href="http://fakeurl.com"
+      />,
+    );
 
     const svg = container.querySelector("svg");
 
