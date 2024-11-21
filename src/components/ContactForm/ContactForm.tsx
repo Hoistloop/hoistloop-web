@@ -234,10 +234,19 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
                         style={{
                           height: "16px",
                           width: "16px",
+                          backgroundColor: "#9EFF00",
                           boxShadow: "0px 2px 2px #4C4C4D",
                         }}
                       />
-                      <div className="absolute left-1/2 top-6 -translate-x-1/2 transform text-xs text-gray-400">
+                      <div
+                        className="absolute left-1/2 top-6 -translate-x-1/2 transform text-xs text-gray-400"
+                        style={{
+                          width: "max-content",
+                          padding: "2px 4px",
+                          backgroundColor: "#242424",
+                          borderRadius: "4px",
+                        }}
+                      >
                         ${values[index]}
                       </div>
                     </div>
