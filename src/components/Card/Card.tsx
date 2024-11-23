@@ -4,7 +4,7 @@ export interface CardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
-  buttonText: string;
+  buttonText?: string;
 }
 
 export default function Card({
@@ -27,9 +27,11 @@ export default function Card({
           {description}
         </div>
       </div>
-      <button className="h-[60px] w-[432px] cursor-pointer rounded-lg bg-neutral-800 text-lg leading-[24px] max-laptop:h-[52px] max-laptop:w-[346.68px] max-laptop:rounded-md max-laptop:text-sm max-laptop:font-medium max-laptop:leading-6 max-mobile:h-[52px] max-mobile:w-[298px]">
-        {buttonText}
-      </button>
+      {buttonText && (
+        <button className="h-[60px] w-[432px] cursor-pointer rounded-lg bg-neutral-800 text-lg leading-[24px] max-laptop:h-[52px] max-laptop:w-[346.68px] max-laptop:rounded-md max-laptop:text-sm max-laptop:font-medium max-laptop:leading-6 max-mobile:h-[52px] max-mobile:w-[298px]">
+          {buttonText}
+        </button>
+      )}
     </div>
   );
 }
