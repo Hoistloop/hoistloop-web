@@ -4,7 +4,10 @@ import headerBg from "@/assets/images/header.png";
 import Hero from "@/components/Hero";
 import CardGroup from "@/components/CardGroup";
 import { CardProps } from "@/components/Card";
-
+import FAQGroup, { FAQGroupProps } from "@/components/FAQGroup";
+import ContactCTA from "@/components/ContactCTA";
+import logo from "@/assets/hoistloop-logo.png";
+import ContactForm from "@/components/ContactForm";
 export default function HomePage() {
   const words = [
     "Startups",
@@ -156,6 +159,61 @@ export default function HomePage() {
     },
   ];
 
+  const faqGroup: FAQGroupProps = {
+    faqs: [
+      {
+        index: 1,
+        question: "What services does SquareUp provide?",
+        response:
+          "SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.",
+      },
+      {
+        index: 2,
+        question: "How can SquareUp help my business?",
+        response:
+          "SquareUp can help your business by creating innovative digital solutions that engage your audience, drive growth, and enhance your brand. We work closely with you to understand your goals and deliver results that exceed your expectations.",
+      },
+      {
+        index: 3,
+        question: "What industries does SquareUp work with?",
+        response:
+          "SquareUp works with a wide range of industries including startups, enterprise leaders, media and publishers, and social good organizations. Our team has the expertise and experience to deliver exceptional results for clients in any industry.",
+      },
+      {
+        index: 4,
+        question: "How long does it take to complete a project with SquareUp?",
+        response:
+          "The time it takes to complete a project with SquareUp depends on the scope and complexity of the project. Our team works efficiently to deliver high-quality results on time and within budget. We provide regular updates and maintain open communication throughout the development process.",
+      },
+      {
+        index: 5,
+        question:
+          "Do you offer ongoing support and maintenance after the project is completed?",
+        response:
+          "Yes, SquareUp offers ongoing support and maintenance services to ensure that your digital products continue to perform at their best. We provide regular updates, security patches, and technical support to keep your digital products running smoothly.",
+      },
+      {
+        index: 6,
+        question:
+          "Can you work with existing design or development frameworks?",
+        response:
+          "Yes, SquareUp can work with existing design or development frameworks to create custom solutions that meet your specific needs. Our team has experience with a wide range of technologies and tools and can adapt to your existing workflows and processes.",
+      },
+      {
+        index: 7,
+        question: "How involved will I be in the project development process?",
+        response:
+          "We believe in open and transparent communication with our clients. You will be involved in every step of the project development process, from initial concept to final delivery. We value your input and feedback and work closely with you to ensure that your vision is realized.",
+      },
+      {
+        index: 8,
+        question: "Can you help with website or app maintenance and updates?",
+        response:
+          "Getting started with SquareUp is easy. Simply contact us via email or phone to schedule a consultation with our team. We will discuss your project requirements, goals, and timeline, and provide you with a detailed proposal outlining our services and pricing. Once you approve the proposal, we will begin work on your project.",
+      },
+    ],
+  };
+
   return (
     <>
       <Navbar />
@@ -179,7 +237,25 @@ export default function HomePage() {
         title="Why Choose SquareUp?"
         subtitle="Experience excellence in digital craftsmanship with our team of skilled professionals dedicated to delivering exceptional results."
       />
-      <CardGroup cards={whyChooseUs} />
+      <CardGroup
+        cards={whyChooseUs}
+        columns={2}
+      />
+      <Hero
+        imageUrl={headerBg}
+        title="Frequently Asked Questions"
+        subtitle="Still you have any questions? Contact our Team via hello@squareup.com."
+      />
+      <FAQGroup faqs={faqGroup.faqs} />
+      <ContactCTA
+        imageSrc={logo} //buscar logo sin letras
+        imageUrl={headerBg}
+        title="Thank you for your Interest in SquareUp."
+        subtitle="We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us."
+        buttonText="Start Project"
+        contactHref="/contact"
+      />
+      <ContactForm buttonText="Send Message" />
     </>
   );
 }
