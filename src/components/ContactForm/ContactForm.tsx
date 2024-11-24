@@ -59,14 +59,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
   };
 
   return (
-    <div className="mx-auto max-w-lg rounded-lg bg-neutral-900 p-8">
+    <div className="mx-auto max-w-4xl rounded-lg border border-gray-700 bg-neutral-900 p-10">
       <form
         className="space-y-6"
         onSubmit={handleSubmit}
       >
         {/* Full Name and Email Fields */}
         <div className="w-full px-3">
-          <div className="-mx-3 flex flex-wrap">
+          <div className=" flex flex-wrap">
             <div className="w-full px-3 md:w-1/2">
               <div className="w-full rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
                 <label className="block text-lg font-medium text-white">
