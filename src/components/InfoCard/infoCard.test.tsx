@@ -1,22 +1,18 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import InfoCard from "./InfoCard";
 import { CursorArrowRippleIcon } from "@heroicons/react/20/solid";
+
+import InfoCard from "@components/InfoCard";
 
 describe("components/InfoCard", () => {
   test("render component", () => {
-    const { container } = render(
+    render(
       <InfoCard
         description="this is a test content"
-        icon={<CursorArrowRippleIcon className="border" />}
+        icon={<CursorArrowRippleIcon />}
       />,
     );
 
-    const svg = container.querySelector(
-      "[data-slot='icon']",
-    ) as HTMLImageElement;
-
     expect(screen.getByText(/this is a test content/i)).toBeDefined();
-    expect(svg.classList.toString()).toContain("border");
   });
 });

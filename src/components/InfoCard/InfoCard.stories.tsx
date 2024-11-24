@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
-import InfoCard from "./InfoCard";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
+
+import InfoCard from "@components/InfoCard";
 
 const meta = {
   title: "InfoCard",

@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
-import CardGroup from "./CardGroup";
-import Card from "../Card/Card";
+import CardGroup from "@components/CardGroup";
 
 const meta = {
   title: "CardGroup",
@@ -17,27 +16,28 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: (
-      <>
-        <Card
-          icon={<PaintBrushIcon />}
-          title="Dog"
-          description="At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences"
-          buttonText="learn more"
-        />
-        <Card
-          icon={<PaintBrushIcon />}
-          title="Cat"
-          description="At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences"
-          buttonText="learn more"
-        />
-        <Card
-          icon={<PaintBrushIcon />}
-          title="Chicken"
-          description="At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences"
-          buttonText="learn more"
-        />
-      </>
-    ),
+    cards: [
+      {
+        icon: <PaintBrushIcon />,
+        title: "Dog",
+        description:
+          "At HoistLoop, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences",
+        buttonText: "learn more",
+      },
+      {
+        icon: <PaintBrushIcon />,
+        title: "Dog",
+        description:
+          "At HoistLoop, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences",
+        buttonText: "learn more",
+      },
+      {
+        icon: <PaintBrushIcon />,
+        title: "Dog",
+        description:
+          "At HoistLoop, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences",
+        buttonText: "learn more",
+      },
+    ],
   },
 };
