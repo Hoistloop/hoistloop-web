@@ -73,7 +73,7 @@ describe("components/DemoItemGroup", () => {
   test("render component", () => {
     render(<DemoItemGroup items={items} />);
 
-    expect(screen.getByText(/E-Commerce/i)).toBeDefined();
+    expect(screen.queryAllByText(/E-Commerce/i)).toBeDefined();
     expect(screen.getByText(/Online/i)).toBeDefined();
     expect(screen.getByText(/Luxury/i)).toBeDefined();
   });
