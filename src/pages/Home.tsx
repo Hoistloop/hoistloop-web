@@ -231,7 +231,10 @@ export default function HomePage() {
         title="Our Services"
         subtitle="Transform your brand with our innovative digital solutions that captivate and engage your audience."
       />
-      <CardGroup cards={services} />
+      <CardGroup
+        cards={services}
+        columns={3}
+      />
       <Hero
         imageUrl={headerBg}
         title="Why Choose SquareUp?"
