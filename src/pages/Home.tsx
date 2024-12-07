@@ -9,13 +9,6 @@ import ContactCTA from "@/components/ContactCTA";
 import logo from "@/assets/hoistloop-logo.png";
 import ContactForm from "@/components/ContactForm";
 export default function HomePage() {
-  const words = [
-    "Startups",
-    "Enterprise leaders",
-    "Media & Publishers",
-    "Social Good",
-  ];
-
   const services: CardProps[] = [
     {
       icon: (
@@ -218,13 +211,18 @@ export default function HomePage() {
     <>
       <Navbar />
       <Header
-        imageUrl={headerBg}
-        title="A Digital Product Studio that will Work"
-        worksText="Our Works"
-        contactText="Contact Us"
-        contactHref="/contact"
-        worksHref="/works"
-        words={words}
+        imageUrl={headerBg} // Fondo visual que refleje tecnología y colaboración
+        title="Empowering Businesses with Scalable Tech Solutions."
+        worksText="Learn More" // Texto ajustado para explorar más información
+        contactText="Schedule a Call" // CTA directo para agendar una llamada
+        contactHref="/contact" // Ruta para la página de contacto
+        worksHref="/services" // Ruta para la página de servicios o "works"
+        words={[
+          "Small Businesses",
+          "Entrepreneurs",
+          "Tech Innovators",
+          "Growing Enterprises",
+        ]} // Palabras dinámicas que representan a tus audiencias clave
       />
       <Hero
         imageUrl={headerBg}
