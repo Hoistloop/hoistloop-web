@@ -35,14 +35,14 @@ export default function ContactCTA({
           {subtitle}
         </p>
       </div>
-      <a
-        className="h-[63px] w-[170px] items-center gap-2 rounded-lg bg-neutral-800 px-[34px] py-[18px] text-center text-lg font-medium text-white max-laptop:h-[49px] max-laptop:w-[127px] max-laptop:rounded-md max-laptop:px-6 max-laptop:py-3.5	max-laptop:text-sm"
-        href={contactHref}
-        rel="noreferrer nofollow"
-        target="_blank"
-      >
-        {buttonText}
-      </a>
+      <div className=" laptop:block">
+        <a
+          href={contactHref}
+          className="rounded-lg bg-[#9EFF00] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
+        >
+          {buttonText}
+        </a>
+      </div>
     </section>
   );
 }

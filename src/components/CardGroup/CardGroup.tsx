@@ -2,11 +2,17 @@ import Card, { type CardProps } from "@components/Card";
 
 export interface CardGroupProps {
   cards: Array<CardProps>;
+  columns?: number;
 }
 
-export default function CardGroup({ cards }: CardGroupProps) {
+export default function CardGroup({ cards, columns = 3 }: CardGroupProps) {
   return (
-    <div className="border-x border-solid border-neutral-800 mobile:block laptop:flex">
+    <div
+      className={`grid gap-6 border-x border-solid border-neutral-800 p-6`}
+      style={{
+        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
+      }}
+    >
       {cards.map((card, idx) => (
         <Card
           {...card}
