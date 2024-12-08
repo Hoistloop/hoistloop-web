@@ -108,15 +108,18 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
         <div className="w-full px-3">
           <div className="rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
             <label className="block text-lg font-medium text-white">
-              Why are you contacting us?
+              How can we help your business?
             </label>
+            <p className="mt-2 text-gray-400">
+              Select the services you're interested in:
+            </p>
             <div className="mt-4 grid grid-cols-2 gap-4">
               {/* Checkbox options */}
               {[
-                { id: "web-design", label: "Web Design" },
-                { id: "collaboration", label: "Collaboration" },
-                { id: "mobile-app-design", label: "Mobile App Design" },
-                { id: "others", label: "Others" },
+                { id: "team-integration", label: "Team Integration" },
+                { id: "custom-software", label: "Custom Software" },
+                { id: "process-automation", label: "Process Automation" },
+                { id: "consulting", label: "Business Consulting" },
               ].map(({ id, label }) => (
                 <div
                   key={id}
@@ -202,10 +205,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
         </div>
 
         {/* Submit Button */}
-        <div className="w-full px-3">
+        <div className="flex w-full items-center justify-center px-3">
           <button
             type="submit"
-            className="w-full rounded-lg bg-lime-500 py-3 text-center font-semibold text-white transition hover:bg-lime-600"
+            className="rounded-lg bg-[#9EFF00] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
           >
             {buttonText}
           </button>

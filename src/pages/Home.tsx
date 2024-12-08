@@ -4,9 +4,9 @@ import headerBg from "@/assets/images/header.png";
 import Hero from "@/components/Hero";
 import CardGroup from "@/components/CardGroup";
 import { CardProps } from "@/components/Card";
-import FAQGroup, { FAQGroupProps } from "@/components/FAQGroup";
 import ContactCTA from "@/components/ContactCTA";
 import logo from "@/assets/hoistloop-logo.png";
+import onlyLogo from "@/assets/logo.png";
 import ContactForm from "@/components/ContactForm";
 export default function HomePage() {
   const services: CardProps[] = [
@@ -14,22 +14,20 @@ export default function HomePage() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="40"
+          width="41"
           height="40"
-          viewBox="0 0 40 40"
+          viewBox="0 0 41 40"
           fill="none"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M34.3309 2.5C33.7053 2.5 33.0937 2.68519 32.5731 3.03223L24.1081 8.67555C21.781 10.227 19.681 12.0782 17.8587 14.1743C21.3833 15.775 24.2249 18.6166 25.8256 22.1413C27.9217 20.319 29.7729 18.219 31.3244 15.8918L36.9677 7.42681C37.3147 6.90625 37.4999 6.29462 37.4999 5.66898C37.4999 3.9188 36.0811 2.5 34.3309 2.5ZM20.4991 25.8748C21.7967 25.154 23.0372 24.3438 24.2127 23.4519C22.7926 19.981 20.019 17.2073 16.548 15.7872C15.6561 16.9627 14.8459 18.2033 14.1251 19.5008L13.6609 20.3364C16.555 21.1642 18.8358 23.4449 19.6636 26.339L20.4991 25.8748ZM11.2499 22.5C7.79811 22.5 4.99992 25.2982 4.99992 28.75C4.99992 30.1307 3.88064 31.25 2.49992 31.25C2.44332 31.25 2.38698 31.2481 2.331 31.2444C1.87074 31.214 1.43114 31.4395 1.18736 31.8311C0.943591 32.2226 0.935277 32.7167 1.16573 33.1162C2.6754 35.7336 5.50561 37.5 8.74992 37.5C13.5824 37.5 17.4999 33.5825 17.4999 28.75C17.4999 25.2982 14.7017 22.5 11.2499 22.5Z"
+            d="M16.2112 29.1936H30.4336C32.21 29.1936 32.8436 28.6926 32.8436 27.7127C32.8436 24.84 29.189 20.8761 23.3167 20.8761C17.4557 20.8761 13.8012 24.84 13.8012 27.7127C13.8012 28.6926 14.4347 29.1936 16.2112 29.1936ZM23.328 18.883C25.7607 18.883 27.8538 16.7452 27.8538 13.9616C27.8538 11.2114 25.7494 9.17383 23.328 9.17383C20.9067 9.17383 18.8022 11.256 18.8022 13.9839C18.8022 16.7452 20.8954 18.883 23.328 18.883ZM3.99137 29.1936H12.5905C11.4138 27.5123 12.8507 24.1274 15.2833 22.2791C14.0274 21.4552 12.4094 20.8427 10.2936 20.8427C5.19072 20.8427 2 24.5505 2 27.6348C2 28.6369 2.56573 29.1936 3.99137 29.1936ZM10.3049 19.1392C12.4094 19.1392 14.2424 17.2686 14.2424 14.8524C14.2424 12.4585 12.3981 10.6881 10.3049 10.6881C8.20041 10.6881 6.34481 12.503 6.35613 14.8747C6.35613 17.2686 8.18909 19.1392 10.3049 19.1392ZM31.7008 18.5491C32.0856 18.8051 32.6173 18.7272 32.9228 18.2929C33.7941 17.1683 34.3146 15.5094 34.3146 13.8058C34.3146 12.1022 33.7941 10.4543 32.9228 9.31858C32.6173 8.88433 32.0856 8.80639 31.7008 9.06248C31.2483 9.37425 31.169 9.93098 31.5311 10.3875C32.1873 11.2782 32.5607 12.5142 32.5607 13.8058C32.5607 15.0974 32.1761 16.3221 31.5311 17.224C31.1804 17.6917 31.2483 18.2261 31.7008 18.5491ZM35.8986 21.4552C36.3172 21.7335 36.8376 21.6333 37.1431 21.2102C38.5914 19.2506 39.44 16.556 39.44 13.8058C39.44 11.0556 38.6028 8.33875 37.1431 6.40135C36.8376 5.97824 36.3172 5.87803 35.8986 6.15639C35.4799 6.43475 35.4121 6.95807 35.7402 7.41459C36.9735 9.12929 37.6862 11.4341 37.6862 13.8058C37.6862 16.1774 36.9508 18.4711 35.7402 20.1969C35.4234 20.6534 35.4799 21.1768 35.8986 21.4552Z"
             fill="#9EFF00"
           />
         </svg>
       ),
-      title: "Design",
+      title: "Team Integration",
       description:
-        "At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences.",
+        "Our skilled developers become an extension of your team, ready to collaborate and deliver results. Whether you need temporary support or ongoing expertise, we ensure seamless integration to help your business thrive.",
       buttonText: "Learn More",
     },
     {
@@ -47,9 +45,9 @@ export default function HomePage() {
           />
         </svg>
       ),
-      title: "Engineering",
+      title: "Custom Software",
       description:
-        "Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs.",
+        "We design and build software that works the way your business needs it to. Whether it’s tools to manage clients, sales, or operations, we create solutions that simplify your processes and drive growth.",
       buttonText: "Learn More",
     },
     {
@@ -67,9 +65,9 @@ export default function HomePage() {
           />
         </svg>
       ),
-      title: "Project Management",
+      title: "Smart Automation",
       description:
-        "Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process.",
+        "We help you automate repetitive tasks, saving time and reducing errors. Our intelligent solutions let you focus on growing your business while the tools handle the rest.",
       buttonText: "Learn More",
     },
   ];
@@ -91,7 +89,7 @@ export default function HomePage() {
       ),
       title: "Expertise",
       description:
-        "At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences.",
+        "At HoistLoop, we bring years of experience in crafting custom technology solutions. Our team leverages the latest tools and methods to deliver scalable, high-quality results tailored to your business needs.",
     },
     {
       icon: (
@@ -110,7 +108,7 @@ export default function HomePage() {
       ),
       title: "Client-Centric Approach",
       description:
-        "We prioritize our clients and their unique needs. We listen to your ideas, challenges, and goals, and tailor our services to meet your specific requirements. Your success is our success.",
+        "We put your goals at the center of everything we do. By listening to your challenges and collaborating closely, we create solutions that align perfectly with your vision and ensure long-term success.",
     },
     {
       icon: (
@@ -129,7 +127,7 @@ export default function HomePage() {
       ),
       title: "Results-Driven Solutions",
       description:
-        "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage.",
+        "We focus on measurable outcomes that add value to your business. Every solution we deliver is designed to save time, improve efficiency, and drive growth for your organization.",
     },
     {
       icon: (
@@ -148,64 +146,9 @@ export default function HomePage() {
       ),
       title: "Collaborative Partnership",
       description:
-        "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive.",
+        "We believe in building lasting relationships with our clients. By working as an extension of your team, we ensure seamless communication, transparency, and shared success throughout every project.",
     },
   ];
-
-  const faqGroup: FAQGroupProps = {
-    faqs: [
-      {
-        index: 1,
-        question: "What services does SquareUp provide?",
-        response:
-          "SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.",
-      },
-      {
-        index: 2,
-        question: "How can SquareUp help my business?",
-        response:
-          "SquareUp can help your business by creating innovative digital solutions that engage your audience, drive growth, and enhance your brand. We work closely with you to understand your goals and deliver results that exceed your expectations.",
-      },
-      {
-        index: 3,
-        question: "What industries does SquareUp work with?",
-        response:
-          "SquareUp works with a wide range of industries including startups, enterprise leaders, media and publishers, and social good organizations. Our team has the expertise and experience to deliver exceptional results for clients in any industry.",
-      },
-      {
-        index: 4,
-        question: "How long does it take to complete a project with SquareUp?",
-        response:
-          "The time it takes to complete a project with SquareUp depends on the scope and complexity of the project. Our team works efficiently to deliver high-quality results on time and within budget. We provide regular updates and maintain open communication throughout the development process.",
-      },
-      {
-        index: 5,
-        question:
-          "Do you offer ongoing support and maintenance after the project is completed?",
-        response:
-          "Yes, SquareUp offers ongoing support and maintenance services to ensure that your digital products continue to perform at their best. We provide regular updates, security patches, and technical support to keep your digital products running smoothly.",
-      },
-      {
-        index: 6,
-        question:
-          "Can you work with existing design or development frameworks?",
-        response:
-          "Yes, SquareUp can work with existing design or development frameworks to create custom solutions that meet your specific needs. Our team has experience with a wide range of technologies and tools and can adapt to your existing workflows and processes.",
-      },
-      {
-        index: 7,
-        question: "How involved will I be in the project development process?",
-        response:
-          "We believe in open and transparent communication with our clients. You will be involved in every step of the project development process, from initial concept to final delivery. We value your input and feedback and work closely with you to ensure that your vision is realized.",
-      },
-      {
-        index: 8,
-        question: "Can you help with website or app maintenance and updates?",
-        response:
-          "Getting started with SquareUp is easy. Simply contact us via email or phone to schedule a consultation with our team. We will discuss your project requirements, goals, and timeline, and provide you with a detailed proposal outlining our services and pricing. Once you approve the proposal, we will begin work on your project.",
-      },
-    ],
-  };
 
   return (
     <>
@@ -227,7 +170,7 @@ export default function HomePage() {
       <Hero
         imageUrl={headerBg}
         title="Our Services"
-        subtitle="Transform your brand with our innovative digital solutions that captivate and engage your audience."
+        subtitle="At HoistLoop, we simplify your operations, create custom tools, and help you grow with scalable, tailored solutions."
       />
       <CardGroup
         cards={services}
@@ -242,19 +185,13 @@ export default function HomePage() {
         cards={whyChooseUs}
         columns={2}
       />
-      <Hero
-        imageUrl={headerBg}
-        title="Frequently Asked Questions"
-        subtitle="Still you have any questions? Contact our Team via hello@squareup.com."
-      />
-      <FAQGroup faqs={faqGroup.faqs} />
       <ContactCTA
-        imageSrc={logo} //buscar logo sin letras
-        imageUrl={headerBg}
-        title="Thank you for your Interest in SquareUp."
-        subtitle="We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us."
-        buttonText="Start Project"
-        contactHref="/contact"
+        imageSrc={onlyLogo} // Asegúrate de utilizar el logo sin texto
+        imageUrl={headerBg} // Fondo visual que refuerce tecnología y colaboración
+        title="Let's Build Your Future with HoistLoop."
+        subtitle="We’re excited to partner with you! Let’s discuss how our custom solutions and expertise can transform your business. Get in touch with us today to start your project."
+        buttonText="Start Your Project"
+        contactHref="/contact" // Redirige a la página de contacto
       />
       <ContactForm buttonText="Send Message" />
     </>
