@@ -21,12 +21,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
 
   const handleRangeChange = (values: number[]) => {
     setValues(values);
-    const rangeInput = document.getElementById("budget-range");
-    if (rangeInput) {
-      rangeInput.style.background = `linear-gradient(to right, #4ade80 0%, #4ade80 ${((values[0] - MIN) / (MAX - MIN)) * 100
-        }%, #333333 ${((values[0] - MIN) / (MAX - MIN)) * 100}%, #333333 ${((values[1] - MIN) / (MAX - MIN)) * 100
-        }%, #4ade80 ${((values[1] - MIN) / (MAX - MIN)) * 100}%, #4ade80 100%)`;
-    }
   };
 
   const handleCheckboxChange = (option: string) => {
@@ -48,7 +42,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
     setFormErrors(errors);
 
     if (Object.keys(errors).length === 0) {
-      // Submit form data
       const formData = {
         fullName,
         email,
@@ -57,7 +50,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
         budget: values,
       };
       console.log("Form submitted:", formData);
-      // Reset the form after submission
       setFullName("");
       setEmail("");
       setMessage("");
@@ -67,24 +59,24 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
   };
 
   return (
-    <div className="mx-auto max-w-lg rounded-lg bg-neutral-900 p-8">
+    <div className="mx-auto max-w-4xl rounded-lg border border-gray-700 bg-neutral-900 p-10">
       <form
         className="space-y-6"
         onSubmit={handleSubmit}
       >
         {/* Full Name and Email Fields */}
         <div className="w-full px-3">
-          <div className="-mx-3 flex flex-wrap ">
-            <div className="w-full flex-1 px-3 md:w-1/2 ">
-              <div className="h-auto w-full rounded-[8px] border border-[#262626] bg-[#242424] bg-opacity-50 p-[24px_40px]">
-                <label className="font-barlow block h-auto w-full text-[22px] font-medium leading-[33px] text-white">
+          <div className=" flex flex-wrap">
+            <div className="w-full px-3 md:w-1/2">
+              <div className="w-full rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
+                <label className="block text-lg font-medium text-white">
                   Full Name
                 </label>
                 <input
                   type="text"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="font-barlow h-[33px] w-full border-b-[1px] border-[#333333] bg-transparent text-[18px] font-normal leading-[27px] text-[#656567] placeholder-gray-500 focus:outline-none"
+                  className="mt-2 w-full border-b border-neutral-700 bg-transparent text-base text-gray-400 placeholder:text-gray-500 focus:outline-none"
                   placeholder="Type here"
                 />
                 {formErrors.fullName && (
@@ -92,16 +84,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
                 )}
               </div>
             </div>
-            <div className="w-full  flex-1 px-3 md:w-1/2">
-              <div className="h-auto w-full rounded-[8px] border border-[#262626] bg-[#242424] bg-opacity-50 p-[24px_40px]">
-                <label className="font-barlow block h-auto w-full text-[22px] font-medium leading-[33px] text-white">
+            <div className="w-full px-3 md:w-1/2">
+              <div className="w-full rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
+                <label className="block text-lg font-medium text-white">
                   Email
                 </label>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="font-barlow h-[33px] w-full border-b-[1px] border-[#333333] bg-transparent text-[18px] font-normal leading-[27px] text-[#656567] placeholder-gray-500 focus:outline-none"
+                  className="mt-2 w-full border-b border-neutral-700 bg-transparent text-base text-gray-400 placeholder:text-gray-500 focus:outline-none"
                   placeholder="Type here"
                 />
                 {formErrors.email && (
@@ -114,169 +106,109 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
 
         {/* Why are you contacting us? */}
         <div className="w-full px-3">
-          <div className="h-auto w-full rounded-[8px] border border-[#262626] bg-[#242424] bg-opacity-50 p-[24px_40px]">
-            <label className="font-barlow mb-4 block h-auto w-full text-[22px] font-medium leading-[33px] text-white">
-              Why are you contacting us?
+          <div className="rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
+            <label className="block text-lg font-medium text-white">
+              How can we help your business?
             </label>
-            <div className="grid grid-cols-2 gap-4">
+            <p className="mt-2 text-gray-400">
+              Select the services you're interested in:
+            </p>
+            <div className="mt-4 grid grid-cols-2 gap-4">
               {/* Checkbox options */}
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="web-design"
-                  className="h-[28px] w-[28px] appearance-none rounded-[4px] border border-[#333333] bg-[#262626] checked:bg-lime-500"
-                  onChange={() => handleCheckboxChange("Web Design")}
-                  checked={selectedOptions.includes("Web Design")}
-                />
-                <label
-                  htmlFor="web-design"
-                  className="ml-2 text-gray-400"
+              {[
+                { id: "team-integration", label: "Team Integration" },
+                { id: "custom-software", label: "Custom Software" },
+                { id: "process-automation", label: "Process Automation" },
+                { id: "consulting", label: "Business Consulting" },
+              ].map(({ id, label }) => (
+                <div
+                  key={id}
+                  className="flex items-center"
                 >
-                  Web Design
-                </label>
-              </div>
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="collaboration"
-                  className="h-[28px] w-[28px] appearance-none rounded-[4px] border border-[#333333] bg-[#262626] checked:bg-lime-500"
-                  onChange={() => handleCheckboxChange("Collaboration")}
-                  checked={selectedOptions.includes("Collaboration")}
-                />
-                <label
-                  htmlFor="collaboration"
-                  className="ml-2 text-gray-400"
-                >
-                  Collaboration
-                </label>
-              </div>
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="mobile-app-design"
-                  className="h-[28px] w-[28px] appearance-none rounded-[4px] border border-[#333333] bg-[#262626] checked:bg-lime-500"
-                  onChange={() => handleCheckboxChange("Mobile App Design")}
-                  checked={selectedOptions.includes("Mobile App Design")}
-                />
-                <label
-                  htmlFor="mobile-app-design"
-                  className="ml-2 text-gray-400"
-                >
-                  Mobile App Design
-                </label>
-              </div>
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="others"
-                  className="h-[28px] w-[28px] appearance-none rounded-[4px] border border-[#333333] bg-[#262626] checked:bg-lime-500"
-                  onChange={() => handleCheckboxChange("Others")}
-                  checked={selectedOptions.includes("Others")}
-                />
-                <label
-                  htmlFor="others"
-                  className="ml-2 text-gray-400"
-                >
-                  Others
-                </label>
-              </div>
+                  <input
+                    type="checkbox"
+                    id={id}
+                    className="size-7 appearance-none rounded border border-neutral-700 bg-neutral-800 checked:bg-lime-500"
+                    onChange={() => handleCheckboxChange(label)}
+                    checked={selectedOptions.includes(label)}
+                  />
+                  <label
+                    htmlFor={id}
+                    className="ml-2 text-gray-400"
+                  >
+                    {label}
+                  </label>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Budget range */}
         <div className="w-full px-3">
-          <div className="h-auto min-h-[180px] w-full rounded-[8px] border border-[#262626] bg-[#242424] bg-opacity-50 p-[24px_40px]">
-            <label className="font-barlow mb-4 block h-auto w-full text-[22px] font-medium leading-[33px] text-white">
+          <div className="rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
+            <label className="block text-lg font-medium text-white">
               Your Budget
             </label>
-            <div className="grid gap-5">
-              <div className="flex w-full items-center">
-                <label
-                  htmlFor="budget-range"
-                  className="w-full text-gray-400"
-                >
-                  Slide to indicate your budget range
-                </label>
-              </div>
-              <div className="mt-4 flex items-center justify-between">
-                <Range
-                  values={values}
-                  step={STEP}
-                  min={MIN}
-                  max={MAX}
-                  onChange={handleRangeChange}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        height: "5px",
-                        width: "100%",
-                        background: getTrackBackground({
-                          values,
-                          colors: ["#333333", "#9EFF00", "#333333"], // Colors outside and between thumbs
-                          min: MIN,
-                          max: MAX,
-                        }),
-                      }}
-                    >
-                      {children}
+            <div className="mt-4">
+              <Range
+                values={values}
+                step={STEP}
+                min={MIN}
+                max={MAX}
+                onChange={handleRangeChange}
+                renderTrack={({ props, children }) => (
+                  <div
+                    {...props}
+                    className="h-1 w-full rounded bg-gray-600"
+                    style={{
+                      background: getTrackBackground({
+                        values,
+                        colors: ["#333333", "#9EFF00", "#333333"],
+                        min: MIN,
+                        max: MAX,
+                      }),
+                    }}
+                  >
+                    {children}
+                  </div>
+                )}
+                renderThumb={({ props, index }) => (
+                  <div
+                    {...props}
+                    className="relative"
+                  >
+                    <div className="size-4 rounded-full bg-lime-500 shadow" />
+                    <div className="absolute left-1/2 top-6 -translate-x-1/2  rounded bg-neutral-900 px-2 py-1 text-xs text-gray-400">
+                      ${values[index]}
                     </div>
-                  )}
-                  renderThumb={({ props, index }) => (
-                    <div
-                      {...props}
-                      className="relative"
-                    >
-                      <div
-                        className="rounded-full bg-lime-500"
-                        style={{
-                          height: "16px",
-                          width: "16px",
-                          backgroundColor: "#9EFF00",
-                          boxShadow: "0px 2px 2px #4C4C4D",
-                        }}
-                      />
-                      <div
-                        className="absolute left-1/2 top-6 -translate-x-1/2 transform text-xs text-gray-400"
-                        style={{
-                          width: "max-content",
-                          padding: "2px 4px",
-                          backgroundColor: "#242424",
-                          borderRadius: "4px",
-                        }}
-                      >
-                        ${values[index]}
-                      </div>
-                    </div>
-                  )}
-                />
-              </div>
+                  </div>
+                )}
+              />
             </div>
           </div>
         </div>
 
         {/* Message Field */}
         <div className="w-full px-3">
-          <div className="h-auto w-full rounded-[8px] border border-[#262626] bg-[#242424] bg-opacity-50 p-[24px_40px]">
-            <label className="font-barlow block h-auto w-full text-[22px] font-medium leading-[33px] text-white">
+          <div className="rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
+            <label className="block text-lg font-medium text-white">
               Your Message
             </label>
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="font-barlow h-[100px] w-full border-b-[1px] border-[#333333] bg-transparent text-[18px] font-normal leading-[27px] text-[#656567] placeholder-gray-500 focus:outline-none"
+              className="mt-2 w-full border-b border-neutral-700 bg-transparent text-base text-gray-400 placeholder:text-gray-500 focus:outline-none"
               placeholder="Type here"
             />
           </div>
         </div>
 
         {/* Submit Button */}
-        <div className="w-full px-3">
+        <div className="flex w-full items-center justify-center px-3">
           <button
             type="submit"
-            className="w-full rounded-lg bg-lime-500 py-3 font-semibold text-gray-900 transition hover:bg-lime-600"
+            className="rounded-lg bg-[#9EFF00] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
           >
             {buttonText}
           </button>
