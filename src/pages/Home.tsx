@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import headerBg from "@/assets/images/header.png";
 import Hero from "@/components/Hero";
 import CardGroup from "@/components/CardGroup";
 import { CardProps } from "@/components/Card";
@@ -7,7 +6,8 @@ import ContactCTA from "@/components/ContactCTA";
 import onlyLogo from "@/assets/logo.png";
 import ContactForm from "@/components/ContactForm";
 
-import logo from "@/assets/hoistloop-logo.png";
+import abstractBg from "@/assets/images/abstract.svg";
+import headerBg from "@/assets/images/header.png";
 
 export default function HomePage() {
   const services: CardProps[] = [
@@ -154,7 +154,7 @@ export default function HomePage() {
   return (
     <>
       <Header
-        imageUrl={headerBg} // Fondo visual que refleje tecnología y colaboración
+        imageUrl={abstractBg} // Fondo visual que refleje tecnología y colaboración
         title="Empowering Businesses with Scalable Tech Solutions."
         worksText="Learn More" // Texto ajustado para explorar más información
         contactText="Schedule a Call" // CTA directo para agendar una llamada
