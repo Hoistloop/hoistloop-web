@@ -1,4 +1,6 @@
 /* eslint-disable no-undef */
+import tailwindcss from "@tailwindcss/typography";
+import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -32,5 +34,5 @@ export default {
       },
     ],
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [tailwindcss, daisyui],
 };

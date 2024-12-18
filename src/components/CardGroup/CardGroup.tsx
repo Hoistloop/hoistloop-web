@@ -8,7 +8,7 @@ export interface CardGroupProps {
 export default function CardGroup({ cards, columns = 3 }: CardGroupProps) {
   return (
     <div
-      className={`grid gap-6 border-x border-solid border-neutral-800 p-6`}
+      className={`grid border-l border-t border-solid border-neutral-800`}
       style={{
         gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
       }}
