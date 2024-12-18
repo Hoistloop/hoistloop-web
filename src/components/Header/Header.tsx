@@ -1,3 +1,4 @@
+import { useNavigate } from "@tanstack/react-router";
 import React from "react";
 
 export interface HeaderProps {
@@ -21,6 +22,7 @@ export default function Header({
   description,
   words,
 }: HeaderProps) {
+  const navigate = useNavigate();
   return (
     <section
       className="h-[796px] w-full bg-cover bg-center pt-28 max-laptop:h-[691px] max-mobile:h-[566px] max-mobile:px-4 max-mobile:pt-20"
@@ -52,22 +54,18 @@ export default function Header({
           )}
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4 text-lg leading-6 max-mobile:flex-col max-mobile:gap-2">
-          <a
-            className="rounded-lg bg-neutral-800 px-6 py-3 text-center text-white outline outline-1 outline-white transition-all duration-300 hover:bg-neutral-700 max-mobile:px-4 max-mobile:py-2 max-mobile:text-sm"
-            href={worksHref}
-            rel="noreferrer nofollow"
-            target="_blank"
+          <button
+            onClick={() => navigate({ to: worksHref })}
+            className=" rounded-lg bg-neutral-800 py-3 text-center outline outline-1 outline-white transition-all duration-300 hover:bg-neutral-700 max-mobile:px-4 max-mobile:py-2 max-mobile:text-sm laptop:px-5 desktop:py-4 desktop:text-lg"
           >
             {worksText}
-          </a>
-          <a
-            className="btn-primary rounded-lg px-6 py-3 text-center transition-all duration-300 hover:bg-blue-700 max-mobile:px-4 max-mobile:py-2 max-mobile:text-sm"
-            href={contactHref}
-            rel="noreferrer nofollow"
-            target="_blank"
+          </button>
+          <button
+            onClick={() => navigate({ to: contactHref })}
+            className=" rounded-lg bg-[#9EFF00] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
           >
             {contactText}
-          </a>
+          </button>
         </div>
       </div>
     </section>

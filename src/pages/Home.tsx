@@ -7,6 +7,7 @@ import ContactForm from "@/components/ContactForm";
 
 import abstractBg from "@/assets/images/abstract.svg";
 import headerBg from "@/assets/images/header.png";
+import logo from "@/assets/logo.svg";
 
 export default function HomePage() {
   const services: CardProps[] = [
