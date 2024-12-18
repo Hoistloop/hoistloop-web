@@ -1,13 +1,14 @@
 import Header from "@/components/Header";
-import Navbar from "@components/Navbar";
 import headerBg from "@/assets/images/header.png";
 import Hero from "@/components/Hero";
 import CardGroup from "@/components/CardGroup";
 import { CardProps } from "@/components/Card";
 import ContactCTA from "@/components/ContactCTA";
-import logo from "@/assets/hoistloop-logo.png";
 import onlyLogo from "@/assets/logo.png";
 import ContactForm from "@/components/ContactForm";
+
+import logo from "@/assets/hoistloop-logo.png";
+
 export default function HomePage() {
   const services: CardProps[] = [
     {
@@ -152,7 +153,6 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar />
       <Header
         imageUrl={headerBg} // Fondo visual que refleje tecnología y colaboración
         title="Empowering Businesses with Scalable Tech Solutions."

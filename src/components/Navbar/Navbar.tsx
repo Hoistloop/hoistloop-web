@@ -16,7 +16,7 @@ export default function Navbar() {
   const router = useRouterState();
 
   return (
-    <header className="flex items-center justify-between mobile:px-4 mobile:py-10 mobile:pb-5 laptop:max-w-screen-laptop laptop:px-20 laptop:py-5 desktop:max-w-screen-desktop desktop:px-[162px] desktop:py-[20px]">
+    <header className="max-laptop:max-w-screen-max-laptop m-auto flex w-screen items-center justify-between border-b border-neutral-800 px-[161px] py-5 max-laptop:px-20 max-laptop:py-5 max-mobile:px-4 max-mobile:py-10 max-mobile:pb-5">
       <Link
         to="/"
         className="h-auto mobile:w-[118px] desktop:w-[177px]"
