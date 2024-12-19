@@ -1,13 +1,14 @@
 import Header from "@/components/Header";
-import Navbar from "@components/Navbar";
-import headerBg from "@/assets/images/header.png";
 import Hero from "@/components/Hero";
 import CardGroup from "@/components/CardGroup";
 import { CardProps } from "@/components/Card";
 import ContactCTA from "@/components/ContactCTA";
-import logo from "@/assets/hoistloop-logo.png";
-import onlyLogo from "@/assets/logo.png";
 import ContactForm from "@/components/ContactForm";
+
+import abstractBg from "@/assets/images/abstract.svg";
+import headerBg from "@/assets/images/header.png";
+import logo from "@/assets/logo.svg";
+
 export default function HomePage() {
   const services: CardProps[] = [
     {
@@ -152,9 +153,8 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar />
       <Header
-        imageUrl={headerBg} // Fondo visual que refleje tecnología y colaboración
+        imageUrl={abstractBg} // Fondo visual que refleje tecnología y colaboración
         title="Empowering Businesses with Scalable Tech Solutions."
         worksText="Learn More" // Texto ajustado para explorar más información
         contactText="Schedule a Call" // CTA directo para agendar una llamada
@@ -186,7 +186,7 @@ export default function HomePage() {
         columns={2}
       />
       <ContactCTA
-        imageSrc={onlyLogo} // Asegúrate de utilizar el logo sin texto
+        imageSrc={logo} // Asegúrate de utilizar el logo sin texto
         imageUrl={headerBg} // Fondo visual que refuerce tecnología y colaboración
         title="Let's Build Your Future with HoistLoop."
         subtitle="We’re excited to partner with you! Let’s discuss how our custom solutions and expertise can transform your business. Get in touch with us today to start your project."
