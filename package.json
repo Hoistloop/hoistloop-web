@@ -19,8 +19,9 @@
     "@tanstack/react-router": "^1.0.0",
     "@tanstack/router-devtools": "^1.0.0",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
     "react-range": "^1.10.0"
   },
   "devDependencies": {
@@ -37,8 +38,8 @@
     "@storybook/types": "7.6.6",
     "@tailwindcss/typography": "^0.5.10",
     "@testing-library/react": "^14.0.0",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
