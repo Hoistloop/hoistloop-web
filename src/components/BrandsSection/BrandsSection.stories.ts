@@ -17,12 +17,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const brands: BrandsProps["brands"] = [
-  { type: "FaAws", size: 40, color: "#FF9900" },
-  { type: "FaReact", size: 40, color: "#61DAFB" },
-  { type: "FaNode", size: 40, color: "#000000" },
-  { type: "SiTypescript", size: 40, color: "#61DAFB" },
-  { type: "SiNextdotjs", size: 40, color: "#FF9900" },
-  { type: "SiPhp", size: 40, color: "#E10098" },
+  { type: "FaAws", size: 40, color: "##E6E6E6" },
+  { type: "FaReact", size: 40, color: "##E6E6E6" },
+  { type: "FaNode", size: 40, color: "##E6E6E6" },
+  { type: "RiNextjsLine", size: 40, color: "##E6E6E6" },
+  { type: "FaPhp", size: 40, color: "##E6E6E6" },
 ];
 
 export const Default: Story = {
