@@ -3,7 +3,7 @@ export interface ContactCTAProps {
   title: string;
   subtitle: string;
   buttonText: string;
-  imageUrl: string;
+  imageUrl?: string;
   contactHref: string;
 }
 

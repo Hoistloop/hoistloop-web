@@ -2,17 +2,26 @@ import Hero from "@/components/Hero";
 import headerBg from "@/assets/images/header.png";
 import FeatureHeader from "@/components/FeatureHeader";
 import FeatureGroup from "@/components/FeatureGroup";
+import logo from "@/assets/logo.svg";
+
 import {
   AdjustmentsHorizontalIcon,
+  BriefcaseIcon,
+  ChartPieIcon,
   CircleStackIcon,
+  ClockIcon,
   CloudIcon,
   CogIcon,
   DevicePhoneMobileIcon,
   GlobeAltIcon,
   ServerIcon,
   ShoppingCartIcon,
+  UserCircleIcon,
+  UserGroupIcon,
+  UsersIcon,
 } from "@heroicons/react/20/solid";
 import FeatureTitle from "@/components/FeatureTitle";
+import ContactCTA from "@/components/ContactCTA";
 
 export default function ServicesPage() {
   return (
@@ -63,6 +72,65 @@ export default function ServicesPage() {
             subtitle: "Workflow Optimization",
           },
         ]}
+      />
+      <FeatureHeader
+        title="Team Integration"
+        description="We provide highly skilled professionals to seamlessly integrate into your team and help you achieve your business goals. Whether you need individual developers or a dedicated team, we ensure a perfect fit to complement your operations."
+        subtitle="Explore What's Included"
+      />
+      <FeatureTitle title="What Team Integration Includes" />
+      <FeatureGroup
+        featureItems={[
+          {
+            icon: <UserGroupIcon />,
+            subtitle: "Staff Augmentation",
+          },
+          {
+            icon: <UsersIcon />,
+            subtitle: "Dedicated Teams",
+          },
+          {
+            icon: <UserCircleIcon />,
+            subtitle: "Flexible Contracts",
+          },
+          {
+            icon: <AdjustmentsHorizontalIcon />,
+            subtitle: "Tailored Skillsets",
+          },
+        ]}
+      />
+      <FeatureHeader
+        title="Smart Automation"
+        description="Transform your business processes with intelligent automation solutions. From streamlining workflows to integrating analytics, we help you save time, reduce errors, and enhance efficiency with scalable automation tools tailored to your needs."
+        subtitle="Explore What's Included"
+      />
+      <FeatureTitle title="What Smart Automation Includes" />
+      <FeatureGroup
+        featureItems={[
+          {
+            icon: <CogIcon />,
+            subtitle: "Workflow Automation",
+          },
+          {
+            icon: <CircleStackIcon />,
+            subtitle: "Data Management",
+          },
+          {
+            icon: <ClockIcon />,
+            subtitle: "Task Scheduling",
+          },
+          {
+            icon: <ChartPieIcon />,
+            subtitle: "Integrated Analytics",
+          },
+        ]}
+      />
+      <ContactCTA
+        imageSrc={logo}
+        title="Ready to Transform Your Business?"
+        subtitle="Let's discuss how we can help you achieve your business goals with our custom solutions."
+        buttonText="Get in Touch"
+        contactHref="/contact"
       />
     </>
   );
