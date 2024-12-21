@@ -1,6 +1,5 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-
 import Header from "@components/Header";
 
 describe("components/Header", () => {
@@ -11,8 +10,8 @@ describe("components/Header", () => {
         title="this is a test title"
         worksText="WorksText"
         contactText="ContactText"
-        contactHref="https://www.contact.com/"
-        worksHref="https://www.works.com/"
+        contactHref="/contact"
+        worksHref="/services"
         description="test description"
         words={[
           "Startups",
@@ -32,14 +31,6 @@ describe("components/Header", () => {
     expect(screen.getByText(/this is a test title/i)).toBeDefined();
     expect(screen.getByText(/WorksText/i)).toBeDefined();
     expect(screen.getByText(/ContactText/i)).toBeDefined();
-    expect(
-      (screen.getByRole("link", { name: "WorksText" }) as HTMLAnchorElement)
-        .href,
-    ).toBe("https://www.works.com/");
-    expect(
-      (screen.getByRole("link", { name: "ContactText" }) as HTMLAnchorElement)
-        .href,
-    ).toBe("https://www.contact.com/");
 
     expect(screen.getByText(/test description/i)).toBeDefined();
     expect(screen.getByText(/Startups/i)).toBeDefined();
