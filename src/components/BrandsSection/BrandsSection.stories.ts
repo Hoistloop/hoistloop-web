@@ -1,6 +1,3 @@
-import { FaAmazon, FaReact } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
-import { ReactNode } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import BrandsSection, { BrandsProps } from "./BrandsSection";
 

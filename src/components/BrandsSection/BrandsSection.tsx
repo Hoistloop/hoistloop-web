@@ -14,20 +14,23 @@ export interface BrandsProps {
 
 const BrandsSection: React.FC<BrandsProps> = ({ brands }) => {
   return (
-    <section
-      className={`flex w-full flex-col items-center gap-1.5 self-stretch px-4 py-[50px] laptop:gap-2.5 laptop:px-[250px] laptop:py-[100px] desktop:gap-3.5 desktop:px-[300px] desktop:py-[120px]`}
-    >
+    <div className="relative mx-auto flex h-44 w-full max-w-[1596px] items-center justify-center gap-x-7 overflow-hidden border border-gray-700/20 p-10">
       {brands.map((brand, index) => {
         const IconComponent = getIconComponent(brand.type);
         return (
-          <IconComponent
+          <div
             key={index}
-            size={brand.size || 40}
-            color={brand.color || "#000"}
-          />
+            className="flex h-24 w-80 items-center justify-center"
+          >
+            <IconComponent
+              size={40}
+              color={brand.color || "#000"}
+              aria-label={`icon-${brand.type}`}
+            />
+          </div>
         );
       })}
-    </section>
+    </div>
   );
 };
 
