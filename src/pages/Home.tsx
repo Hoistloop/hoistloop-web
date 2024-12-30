@@ -1,12 +1,12 @@
 import Header from "@/components/Header";
+import headerBg from "@/assets/header.png";
 import Hero from "@/components/Hero";
 import CardGroup from "@/components/CardGroup";
 import { CardProps } from "@/components/Card";
 import ContactCTA from "@/components/ContactCTA";
 import ContactForm from "@/components/ContactForm";
 
-import abstractBg from "@/assets/images/abstract.svg";
-import headerBg from "@/assets/images/header.png";
+import abstractBg from "@/assets/abstract.svg";
 import logo from "@/assets/logo.svg";
 
 export default function HomePage() {
