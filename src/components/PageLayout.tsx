@@ -1,4 +1,5 @@
 import Navbar from "@components/Navbar";
+import Footer from "./Footer";
 
 export default function PageLayout({
   children,
@@ -10,6 +11,7 @@ export default function PageLayout({
       <main>
         <Navbar />
         <section className="m-auto w-9/12">{children}</section>
+        <Footer />
       </main>
     </>
   );
