@@ -1,5 +1,5 @@
 // Vendor
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
 import { FaLinkedin, FaInstagram, FaFacebookSquare } from "react-icons/fa";
 
@@ -8,8 +8,11 @@ import SocialIcon from "@components/SocialIcon";
 
 // Assets
 import logo from "../../assets/hoistloop-logo.png";
-
+// Consts
+import routes from "constants/routes";
 export default function Footer() {
+  const router = useRouterState();
+
   return (
     <footer className="flex w-full flex-col gap-6  border-t border-neutral-800 p-6">
       <div className="flex flex-1 flex-row items-center justify-center gap-4">
@@ -25,13 +28,16 @@ export default function Footer() {
         </Link>
 
         <div className="flex flex-row gap-4">
-          {["Home", "Services", "About", "Contact"].map((item) => (
-            <button
-              key={item}
-              className="bg-transparent text-white hover:underline"
+          {routes.map((route) => (
+            <Link
+              to={route.path}
+              key={route.name}
+              className={`bg-transparent text-white transition duration-300 hover:underline ${
+                router.location.pathname === route.path ? "underline" : ""
+              }`}
             >
-              {item}
-            </button>
+              {route.name}
+            </Link>
           ))}
         </div>
 
