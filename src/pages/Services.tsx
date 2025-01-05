@@ -1,12 +1,11 @@
 import Hero from "@/components/Hero";
-import headerBg from "@/assets/images/header.png";
+import headerBg from "@/assets/header.png";
 import FeatureHeader from "@/components/FeatureHeader";
 import FeatureGroup from "@/components/FeatureGroup";
 import logo from "@/assets/logo.svg";
 
 import {
   AdjustmentsHorizontalIcon,
-  BriefcaseIcon,
   ChartPieIcon,
   CircleStackIcon,
   ClockIcon,
