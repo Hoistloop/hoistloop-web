@@ -1,15 +1,20 @@
 export interface FeatureHeaderProps {
+  id?: string;
   title: string;
   description?: string;
   subtitle?: string;
 }
 export default function FeatureHeader({
+  id,
   title,
   description,
   subtitle,
 }: FeatureHeaderProps) {
   return (
-    <div className="flex flex-col justify-between gap-[50px] border border-neutral-800 px-[60px] py-[20px] max-laptop:gap-10 max-laptop:px-10 max-mobile:gap-[30px] max-mobile:px-4">
+    <div
+      id={id}
+      className="flex flex-col justify-between gap-[50px] border border-neutral-800 px-[60px] py-[20px] max-laptop:gap-10 max-laptop:px-10 max-mobile:gap-[30px] max-mobile:px-4"
+    >
       <div className="flex flex-col gap-3.5 max-laptop:gap-2.5 max-mobile:gap-1.5">
         <p className=" h-[58px] text-5xl font-semibold leading-[57.6px] text-white max-laptop:h-[46px] max-laptop:text-[38px] max-laptop:leading-[45.6px] max-mobile:h-[34px] max-mobile:text-[28px] max-mobile:leading-[36.6px] ">
           {title}

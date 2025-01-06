@@ -8,6 +8,7 @@ import ContactForm from "@/components/ContactForm";
 
 import abstractBg from "@/assets/abstract.svg";
 import logo from "@/assets/logo.svg";
+import BrandsSection from "@/components/BrandsSection";
 
 export default function HomePage() {
   const services: CardProps[] = [
@@ -29,7 +30,7 @@ export default function HomePage() {
       title: "Team Integration",
       description:
         "Our skilled developers become an extension of your team, ready to collaborate and deliver results. Whether you need temporary support or ongoing expertise, we ensure seamless integration to help your business thrive.",
-      buttonText: "Learn More",
+      button: { text: "Learn More", link: "/services#team-integration" },
     },
     {
       icon: (
@@ -49,7 +50,7 @@ export default function HomePage() {
       title: "Custom Software",
       description:
         "We design and build software that works the way your business needs it to. Whether it’s tools to manage clients, sales, or operations, we create solutions that simplify your processes and drive growth.",
-      buttonText: "Learn More",
+      button: { text: "Learn More", link: "/services#custom-software" },
     },
     {
       icon: (
@@ -69,7 +70,7 @@ export default function HomePage() {
       title: "Smart Automation",
       description:
         "We help you automate repetitive tasks, saving time and reducing errors. Our intelligent solutions let you focus on growing your business while the tools handle the rest.",
-      buttonText: "Learn More",
+      button: { text: "Learn More", link: "/services#smart-automation" },
     },
   ];
   const whyChooseUs: CardProps[] = [
@@ -166,6 +167,15 @@ export default function HomePage() {
           "Tech Innovators",
           "Growing Enterprises",
         ]} // Palabras dinámicas que representan a tus audiencias clave
+      />
+      <BrandsSection
+        brands={[
+          { type: "FaAws", size: 40, color: "##E6E6E6" },
+          { type: "FaReact", size: 40, color: "##E6E6E6" },
+          { type: "FaNodeJs", size: 40, color: "##E6E6E6" },
+          { type: "RiNextjsLine", size: 40, color: "##E6E6E6" },
+          { type: "FaPhp", size: 40, color: "##E6E6E6" },
+        ]}
       />
       <Hero
         imageUrl={headerBg}

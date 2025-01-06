@@ -31,6 +31,7 @@ export default function ServicesPage() {
         subtitle="At HoistLoop, we streamline processes, build custom solutions, and empower businesses to scale efficiently."
       />
       <FeatureHeader
+        id={"custom-software"}
         title="Custom Software"
         description="We create software designed to simplify your daily tasks and help your business run more efficiently. Whether you need a system to organize your operations, automate processes, or support your growth, our solutions are tailored to meet your needs and adapt as your business evolves."
         subtitle="Explore What's Included"
@@ -73,6 +74,7 @@ export default function ServicesPage() {
         ]}
       />
       <FeatureHeader
+        id={"team-integration"}
         title="Team Integration"
         description="We provide highly skilled professionals to seamlessly integrate into your team and help you achieve your business goals. Whether you need individual developers or a dedicated team, we ensure a perfect fit to complement your operations."
         subtitle="Explore What's Included"
@@ -99,6 +101,7 @@ export default function ServicesPage() {
         ]}
       />
       <FeatureHeader
+        id={"process-automation"}
         title="Smart Automation"
         description="Transform your business processes with intelligent automation solutions. From streamlining workflows to integrating analytics, we help you save time, reduce errors, and enhance efficiency with scalable automation tools tailored to your needs."
         subtitle="Explore What's Included"
