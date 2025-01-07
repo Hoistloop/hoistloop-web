@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import headerBg from "@/assets/header.png";
 import Hero from "@/components/Hero";
 import CardGroup from "@/components/CardGroup";
 import { CardProps } from "@/components/Card";
@@ -178,7 +177,7 @@ export default function HomePage() {
         ]}
       />
       <Hero
-        imageUrl={headerBg}
+        imageUrl={abstractBg}
         title="Our Services"
         subtitle="At HoistLoop, we simplify your operations, create custom tools, and help you grow with scalable, tailored solutions."
       />
@@ -187,7 +186,7 @@ export default function HomePage() {
         columns={3}
       />
       <Hero
-        imageUrl={headerBg}
+        imageUrl={abstractBg}
         title="Why Choose SquareUp?"
         subtitle="Experience excellence in digital craftsmanship with our team of skilled professionals dedicated to delivering exceptional results."
       />
@@ -197,7 +196,7 @@ export default function HomePage() {
       />
       <ContactCTA
         imageSrc={logo} // Asegúrate de utilizar el logo sin texto
-        imageUrl={headerBg} // Fondo visual que refuerce tecnología y colaboración
+        imageUrl={abstractBg} // Fondo visual que refuerce tecnología y colaboración
         title="Let's Build Your Future with HoistLoop."
         subtitle="We’re excited to partner with you! Let’s discuss how our custom solutions and expertise can transform your business. Get in touch with us today to start your project."
         buttonText="Start Your Project"

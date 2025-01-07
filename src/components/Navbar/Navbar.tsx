@@ -53,7 +53,7 @@ export default function Navbar() {
         <Link
           to={"/contact"}
           key={"Contact"}
-          className="rounded-lg bg-[#9EFF00] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
+          className="rounded-lg bg-[#2c70b1] font-medium laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
         >
           Contact
         </Link>

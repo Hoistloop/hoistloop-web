@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import headerBg from "@/assets/header.png";
+import abstractBg from "@/assets/abstract.svg";
 import FeatureHeader from "@/components/FeatureHeader";
 import FeatureGroup from "@/components/FeatureGroup";
 import logo from "@/assets/logo.svg";
@@ -26,7 +26,7 @@ export default function ServicesPage() {
   return (
     <>
       <Hero
-        imageUrl={headerBg}
+        imageUrl={abstractBg}
         title="Driving Business Growth Through Technology"
         subtitle="At HoistLoop, we streamline processes, build custom solutions, and empower businesses to scale efficiently."
       />
@@ -36,7 +36,6 @@ export default function ServicesPage() {
         description="We create software designed to simplify your daily tasks and help your business run more efficiently. Whether you need a system to organize your operations, automate processes, or support your growth, our solutions are tailored to meet your needs and adapt as your business evolves."
         subtitle="Explore What's Included"
       />
-      <FeatureTitle title="Core Features of Custom Software" />
       <FeatureGroup
         featureItems={[
           {
@@ -79,7 +78,6 @@ export default function ServicesPage() {
         description="We provide highly skilled professionals to seamlessly integrate into your team and help you achieve your business goals. Whether you need individual developers or a dedicated team, we ensure a perfect fit to complement your operations."
         subtitle="Explore What's Included"
       />
-      <FeatureTitle title="What Team Integration Includes" />
       <FeatureGroup
         featureItems={[
           {
@@ -106,7 +104,6 @@ export default function ServicesPage() {
         description="Transform your business processes with intelligent automation solutions. From streamlining workflows to integrating analytics, we help you save time, reduce errors, and enhance efficiency with scalable automation tools tailored to your needs."
         subtitle="Explore What's Included"
       />
-      <FeatureTitle title="What Smart Automation Includes" />
       <FeatureGroup
         featureItems={[
           {

@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import headerBg from "@/assets/header.png";
+import abstractBg from "@/assets/abstract.svg";
 import StepCardGroup from "@/components/StepCardGroup";
 import AboutCTA from "@/components/AboutCTA";
 import logo from "@/assets/logo.svg";
@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        imageUrl={headerBg}
+        imageUrl={abstractBg}
         title="Empowering Innovation, Driving Growth"
         subtitle="At HoistLoop, we leverage cutting-edge technology to transform manual processes into scalable solutions. Our mission is to empower businesses with tailored tools, fostering innovation and long-term success."
       />

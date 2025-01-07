@@ -44,7 +44,7 @@ export default function AboutCTA({
         </span>
         <Link
           to={button.link}
-          className="btn btn-primary"
+          className="btn bg-[#2c70b1]"
         >
           {button.text}
         </Link>
