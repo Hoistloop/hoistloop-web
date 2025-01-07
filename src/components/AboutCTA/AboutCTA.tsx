@@ -1,8 +1,10 @@
+import { Link } from "@tanstack/react-router";
+
 export interface AboutCTAProps {
   imageUrl: string;
   title: string;
   description: string;
-  button: { text: string };
+  button: { text: string; link: string };
   header: string;
   subHeader: string;
 }
@@ -40,7 +42,12 @@ export default function AboutCTA({
         <span className="text-nowrap rounded-lg bg-slate-500 px-5 py-[14px] text-xl font-normal max-laptop:rounded-md max-laptop:px-[14px] max-laptop:py-[10px] max-laptop:text-lg max-mobile:text-wrap max-mobile:text-center">
           {subHeader}
         </span>
-        <button className="btn btn-primary">{button.text}</button>
+        <Link
+          to={button.link}
+          className="btn bg-[#2c70b1]"
+        >
+          {button.text}
+        </Link>
       </div>
     </div>
   );

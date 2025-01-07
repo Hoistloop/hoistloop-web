@@ -6,7 +6,7 @@ export interface ContactGroupProps {
 
 export default function ContactGroup({ contacts }: ContactGroupProps) {
   return (
-    <div className="flex gap-6 max-mobile:flex-col">
+    <div className="flex items-center justify-center gap-9 border border-neutral-800  py-12 max-mobile:flex-col">
       {contacts.map((contact, idx) => (
         <ContactItem
           {...contact}

@@ -6,7 +6,7 @@ export interface StepCardGroupProps {
 
 export default function StepCardGroup({ steps }: StepCardGroupProps) {
   return (
-    <div className="grid grid-cols-2 max-mobile:grid-cols-1">
+    <div className="grid grid-cols-2 border-l border-neutral-800 max-mobile:grid-cols-1">
       {steps.map((step, idx) => (
         <StepCard
           {...step}
