@@ -1,6 +1,5 @@
 // Vendor
 import { Link, useRouterState } from "@tanstack/react-router";
-import { PaintBrushIcon } from "@heroicons/react/20/solid";
 import { FaLinkedin, FaInstagram, FaFacebookSquare } from "react-icons/fa";
 
 // Components
@@ -10,6 +9,10 @@ import SocialIcon from "@components/SocialIcon";
 import logo from "../../assets/hoistloop-logo.png";
 // Consts
 import routes from "constants/routes";
+import { CiMail } from "react-icons/ci";
+import { BsTelephone } from "react-icons/bs";
+import { CiLocationOn } from "react-icons/ci";
+
 export default function Footer() {
   const router = useRouterState();
 
@@ -61,21 +64,16 @@ export default function Footer() {
       {/* Ajuste de margen */}
       <div className="flex flex-col items-center justify-center gap-4">
         <div className="flex flex-1 flex-row gap-4">
-          <button
-            className="flex items-center gap-1 bg-transparent text-white hover:underline"
-            onClick={() =>
-              (window.location.href = "mailto:example@example.com")
-            }
-          >
-            <PaintBrushIcon className="size-5" />
-            hoistloop@email.com
+          <button className="flex items-center gap-1 bg-transparent text-white ">
+            <CiMail className="size-6" />
+            hoistloop@gmail.com
           </button>
           <button
             className="flex items-center gap-1 bg-transparent text-white hover:underline"
-            onClick={() => (window.location.href = "tel:+1234567890")}
+            onClick={() => window.open("https://wa.me/5491124090415", "_blank")}
           >
-            <PaintBrushIcon className="size-5" />
-            +54 342 111 1111
+            <BsTelephone className="size-5" />
+            +54 11 2409 0415
           </button>
           <button
             className="flex items-center gap-1 bg-transparent text-white hover:underline"
@@ -83,7 +81,7 @@ export default function Footer() {
               (window.location.href = "https://www.google.com/maps")
             }
           >
-            <PaintBrushIcon className="size-5" />
+            <CiLocationOn className="size-6" />
             Argentina, Santa Fe
           </button>
           <div className="grid flex-1 justify-items-end">
