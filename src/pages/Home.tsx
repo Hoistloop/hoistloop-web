@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import headerBg from "@/assets/header.png";
 import Hero from "@/components/Hero";
 import CardGroup from "@/components/CardGroup";
 import { CardProps } from "@/components/Card";
@@ -8,6 +7,7 @@ import ContactForm from "@/components/ContactForm";
 
 import abstractBg from "@/assets/abstract.svg";
 import logo from "@/assets/logo.svg";
+import BrandsSection from "@/components/BrandsSection";
 
 export default function HomePage() {
   const services: CardProps[] = [
@@ -29,7 +29,7 @@ export default function HomePage() {
       title: "Team Integration",
       description:
         "Our skilled developers become an extension of your team, ready to collaborate and deliver results. Whether you need temporary support or ongoing expertise, we ensure seamless integration to help your business thrive.",
-      buttonText: "Learn More",
+      button: { text: "Learn More", link: "/services#team-integration" },
     },
     {
       icon: (
@@ -49,7 +49,7 @@ export default function HomePage() {
       title: "Custom Software",
       description:
         "We design and build software that works the way your business needs it to. Whether it’s tools to manage clients, sales, or operations, we create solutions that simplify your processes and drive growth.",
-      buttonText: "Learn More",
+      button: { text: "Learn More", link: "/services#custom-software" },
     },
     {
       icon: (
@@ -69,7 +69,7 @@ export default function HomePage() {
       title: "Smart Automation",
       description:
         "We help you automate repetitive tasks, saving time and reducing errors. Our intelligent solutions let you focus on growing your business while the tools handle the rest.",
-      buttonText: "Learn More",
+      button: { text: "Learn More", link: "/services#smart-automation" },
     },
   ];
   const whyChooseUs: CardProps[] = [
@@ -167,8 +167,17 @@ export default function HomePage() {
           "Growing Enterprises",
         ]} // Palabras dinámicas que representan a tus audiencias clave
       />
+      <BrandsSection
+        brands={[
+          { type: "FaAws", size: 40, color: "##E6E6E6" },
+          { type: "FaReact", size: 40, color: "##E6E6E6" },
+          { type: "FaNodeJs", size: 40, color: "##E6E6E6" },
+          { type: "RiNextjsLine", size: 40, color: "##E6E6E6" },
+          { type: "FaPhp", size: 40, color: "##E6E6E6" },
+        ]}
+      />
       <Hero
-        imageUrl={headerBg}
+        imageUrl={abstractBg}
         title="Our Services"
         subtitle="At HoistLoop, we simplify your operations, create custom tools, and help you grow with scalable, tailored solutions."
       />
@@ -177,7 +186,7 @@ export default function HomePage() {
         columns={3}
       />
       <Hero
-        imageUrl={headerBg}
+        imageUrl={abstractBg}
         title="Why Choose SquareUp?"
         subtitle="Experience excellence in digital craftsmanship with our team of skilled professionals dedicated to delivering exceptional results."
       />
@@ -187,7 +196,7 @@ export default function HomePage() {
       />
       <ContactCTA
         imageSrc={logo} // Asegúrate de utilizar el logo sin texto
-        imageUrl={headerBg} // Fondo visual que refuerce tecnología y colaboración
+        imageUrl={abstractBg} // Fondo visual que refuerce tecnología y colaboración
         title="Let's Build Your Future with HoistLoop."
         subtitle="We’re excited to partner with you! Let’s discuss how our custom solutions and expertise can transform your business. Get in touch with us today to start your project."
         buttonText="Start Your Project"

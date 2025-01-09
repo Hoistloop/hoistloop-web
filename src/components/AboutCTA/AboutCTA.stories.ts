@@ -20,7 +20,7 @@ export const Default: Story = {
       "Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.....",
     description:
       "Combining the power of design, engineering, and project management to create transformative digital experiences. They invite you to join them on their journey and discover how they can help bring your digital ideas to life.",
-    button: { text: "Start Project" },
+    button: { text: "Start Project", link: "/" },
     header: "Welcome to Hoistloop",
     subHeader:
       "Where collaboration, Expertise, and Client-Centricity Intersect to Shape the Future of Digital Innovation.",

@@ -6,6 +6,7 @@ import PageLayout from "@components/PageLayout";
 import ServicesPage from "@pages/Services";
 import CareersPage from "./pages/Careers";
 import AboutPage from "./pages/About";
+import ContactPage from "./pages/Contact";
 
 const rootRoute = new RootRoute({
   component: () => (
@@ -40,7 +41,13 @@ const aboutRoute = new Route({
     return <AboutPage />;
   },
 });
-
+const contactRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: "/contact",
+  component: function Services() {
+    return <ContactPage />;
+  },
+});
 const careersRoute = new Route({
   getParentRoute: () => rootRoute,
   path: "/careers",
@@ -48,11 +55,11 @@ const careersRoute = new Route({
     return <CareersPage />;
   },
 });
-
 const routeTree = rootRoute.addChildren([
   indexRoute,
   servicesRoute,
   aboutRoute,
+  contactRoute,
   careersRoute,
 ]);
 

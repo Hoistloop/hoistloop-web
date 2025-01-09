@@ -10,7 +10,7 @@ describe("components/Card", () => {
         icon={<CursorArrowRippleIcon />}
         title="this is a test title"
         description="this is a test description"
-        buttonText="text button"
+        button={{ text: "text button", link: "#" }}
       />,
     );
 
