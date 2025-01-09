@@ -19,6 +19,11 @@ const routes = [
     path: "/contact",
     showNav: false,
   },
+  {
+    name: "Careers",
+    path: "/careers",
+    showNav: true,
+  },
 ];
 
 export default routes;

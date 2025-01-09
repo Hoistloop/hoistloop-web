@@ -2,7 +2,7 @@ import Icon from "@components/Icon";
 import { useRouter } from "@tanstack/react-router";
 
 export interface CardProps {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   title: string;
   description: string;
   button?: { text: string; link: string };
@@ -26,7 +26,8 @@ export default function Card({ icon, title, description, button }: CardProps) {
     >
       <div className="h-max w-[432px] max-laptop:w-[346.68px] max-mobile:w-[298px]">
         <div className="max-mobile:mb-6 max-mobile:flex max-mobile:items-center max-mobile:gap-3.5 ">
-          <Icon icon={icon} />
+          {icon && <Icon icon={icon} />}
+
           <div className="mb-5 mt-[30px] text-3xl font-semibold leading-[45px] max-laptop:mb-3.5 max-laptop:text-2xl max-laptop:leading-9 max-mobile:mb-0 max-mobile:text-xl">
             {title}
           </div>

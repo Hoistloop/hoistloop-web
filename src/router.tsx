@@ -4,6 +4,7 @@ import { Outlet, Router, Route, RootRoute } from "@tanstack/react-router";
 import Home from "@pages/Home";
 import PageLayout from "@components/PageLayout";
 import ServicesPage from "@pages/Services";
+import CareersPage from "./pages/Careers";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 
@@ -33,7 +34,6 @@ const servicesRoute = new Route({
     return <ServicesPage />;
   },
 });
-
 const aboutRoute = new Route({
   getParentRoute: () => rootRoute,
   path: "/about",
@@ -48,12 +48,19 @@ const contactRoute = new Route({
     return <ContactPage />;
   },
 });
-
+const careersRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: "/careers",
+  component: function Services() {
+    return <CareersPage />;
+  },
+});
 const routeTree = rootRoute.addChildren([
   indexRoute,
   servicesRoute,
   aboutRoute,
   contactRoute,
+  careersRoute,
 ]);
 
 const router = new Router({ routeTree });
