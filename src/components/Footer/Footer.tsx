@@ -46,16 +46,16 @@ export default function Footer() {
 
         <div className="flex flex-row items-center justify-center gap-2 rounded-xl border border-neutral-800 px-6 py-8">
           <div>Stay Connected</div>
-          <SocialIcon
+          {/* <SocialIcon
             href="mailto:example@example.com"
             icon={<FaFacebookSquare />}
-          />
+          /> */}
           <SocialIcon
-            href="tel:+1234567890"
+            href="https://www.instagram.com/hoistloop/?igsh=MWEybmJpZGF0YXZxdA%3D%3D"
             icon={<FaInstagram />}
           />
           <SocialIcon
-            href="https://www.google.com/maps"
+            href="https://www.linkedin.com/company/hoistloop/?viewAsMember=true"
             icon={<FaLinkedin />}
           />
         </div>
@@ -75,12 +75,7 @@ export default function Footer() {
             <BsTelephone className="size-5" />
             +54 11 2409 0415
           </button>
-          <button
-            className="flex items-center gap-1 bg-transparent text-white hover:underline"
-            onClick={() =>
-              (window.location.href = "https://www.google.com/maps")
-            }
-          >
+          <button className="flex items-center gap-1 bg-transparent text-white ">
             <CiLocationOn className="size-6" />
             Argentina, Santa Fe
           </button>
