@@ -22,6 +22,7 @@ const routes = [
   {
     name: "Careers",
     path: "/careers",
+    showNav: true,
   },
 ];
 

@@ -1,12 +1,13 @@
 import Hero from "@/components/Hero";
-import headerBg from "@/assets/header.png";
+import abstractBg from "@/assets/abstract.svg";
+
 import FeatureHeader from "@/components/FeatureHeader";
 import CardGroup from "@/components/CardGroup";
 export default function CareersPage() {
   return (
     <>
       <Hero
-        imageUrl={headerBg}
+        imageUrl={abstractBg}
         title="Your Next Chapter Starts Here"
         subtitle="Join HoistLoop and make an impact. Grow your career, solve meaningful challenges, and shape the future of technology."
       />
@@ -51,25 +52,25 @@ export default function CareersPage() {
             title: "UI/UX Designer",
             description:
               "Join our design team to craft user-centered, visually stunning interfaces. Your creativity will help shape seamless experiences across mobile and web platforms.",
-            buttonText: "Apply Now",
+            button: { text: "Apply Now", link: "/" },
           },
           {
             title: "Back-End Developer",
             description:
               "Work on scalable and efficient server-side solutions. You'll design robust APIs, optimize database structures, and build the backbone of cutting-edge applications.",
-            buttonText: "Apply Now",
+            button: { text: "Apply Now", link: "/" },
           },
           {
             title: "Front-End Developer (Mobile & Web)",
             description:
               "Bring designs to life with responsive and dynamic interfaces. Collaborate closely with designers and back-end developers to create exceptional mobile and web applications.",
-            buttonText: "Apply Now",
+            button: { text: "Apply Now", link: "/" },
           },
           {
             title: "Project Manager",
             description:
               "Lead diverse teams and ensure timely delivery of high-impact projects. Your organizational skills and technical knowledge will be key to our success.",
-            buttonText: "Apply Now",
+            button: { text: "Apply Now", link: "/" },
           },
         ]}
         columns={2}
