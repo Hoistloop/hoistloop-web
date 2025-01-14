@@ -14,17 +14,20 @@ export interface BrandsProps {
 
 const BrandsSection: React.FC<BrandsProps> = ({ brands }) => {
   return (
-    <div className="relative mx-auto flex h-44 w-full max-w-[1596px] items-center justify-center gap-x-7 overflow-hidden border border-gray-700/20 p-10">
+    <div
+      className="relative mx-auto grid w-full max-w-[1596px] gap-6 border border-gray-700/20 p-10"
+      style={{ gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))" }}
+    >
       {brands.map((brand, index) => {
         const IconComponent = getIconComponent(brand.type);
         return (
           <div
             key={index}
-            className="flex h-24 w-80 items-center justify-center"
+            className="flex items-center justify-center  p-4"
           >
             <IconComponent
-              size={40}
-              color={brand.color || "#000"}
+              size={50}
+              color={brand.color || "#fff"}
               aria-label={`icon-${brand.type}`}
             />
           </div>

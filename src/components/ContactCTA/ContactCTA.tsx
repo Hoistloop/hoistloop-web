@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 export interface ContactCTAProps {
   imageSrc: string;
   title: string;
@@ -36,12 +38,12 @@ export default function ContactCTA({
         </p>
       </div>
       <div className=" laptop:block">
-        <a
-          href={contactHref}
-          className="rounded-lg bg-[#9EFF00] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
+        <Link
+          to={contactHref}
+          className="block rounded-lg bg-[#2c70b1] px-5 py-3 text-sm font-medium text-white"
         >
           {buttonText}
-        </a>
+        </Link>
       </div>
     </section>
   );
