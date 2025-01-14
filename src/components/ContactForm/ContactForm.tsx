@@ -247,7 +247,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
           <div className="flex w-full items-center justify-center px-3">
             <button
               type="submit"
-              className="rounded-lg bg-[#9EFF00] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
+              className="rounded-lg bg-[#2c70b1] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : buttonText}
