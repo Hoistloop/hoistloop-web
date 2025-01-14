@@ -10,7 +10,7 @@ export default function PageLayout({
     <>
       <main>
         <Navbar />
-        <section className="m-auto w-9/12">{children}</section>
+        <section className="m-auto w-full px-4 sm:w-9/12">{children}</section>
         <Footer />
       </main>
     </>
