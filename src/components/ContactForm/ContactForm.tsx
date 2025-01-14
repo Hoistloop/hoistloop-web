@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { getTrackBackground, Range } from "react-range";
+import emailjs from "emailjs-com";
 
 interface ContactFormProps {
   buttonText: string;
 }
+
 const STEP = 100;
 const MIN = 0;
 const MAX = 50000;
@@ -18,6 +20,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
     fullName?: string;
     email?: string;
   }>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionSuccess, setSubmissionSuccess] = useState<boolean | null>(
+    null,
+  );
 
   const handleRangeChange = (values: number[]) => {
     setValues(values);
@@ -31,30 +37,61 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const errors: { fullName?: string; email?: string } = {};
 
-    // Simple validation
     if (!fullName) errors.fullName = "Full Name is required";
     if (!email) errors.email = "Email is required";
 
     setFormErrors(errors);
 
     if (Object.keys(errors).length === 0) {
+      setIsSubmitting(true);
+
       const formData = {
         fullName,
         email,
         message,
-        selectedOptions,
-        budget: values,
+        selectedOptions: selectedOptions.join(", "),
+        budget: `From $${values[0]} to $${values[1]}`,
       };
-      console.log("Form submitted:", formData);
-      setFullName("");
-      setEmail("");
-      setMessage("");
-      setSelectedOptions([]);
-      setValues([0, 50000]);
+      console.log("nino", formData);
+
+      try {
+        await emailjs.send(
+          "service_ehvx66a",
+          "template_72ft20l",
+          {
+            message: `
+      Nuevo mensaje del formulario de contacto:
+
+      Nombre completo: ${formData.fullName}
+      Correo electrónico: ${formData.email}
+      Mensaje: ${formData.message}
+
+      Opciones seleccionadas:
+       ${formData.selectedOptions}
+
+      Presupuesto:
+      ${formData.budget}
+    `,
+          },
+          "HsR5_xeaNGVh6RVwZ",
+        );
+
+        setSubmissionSuccess(true);
+        setFullName("");
+        setEmail("");
+        setMessage("");
+        setSelectedOptions([]);
+        setValues([0, 50000]);
+      } catch (error) {
+        console.error("Failed to send email:", error);
+        setSubmissionSuccess(false);
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -117,7 +154,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
                 Select the services you're interested in:
               </p>
               <div className="mt-4 grid grid-cols-2 gap-4">
-                {/* Checkbox options */}
                 {[
                   { id: "team-integration", label: "Team Integration" },
                   { id: "custom-software", label: "Custom Software" },
@@ -212,11 +248,22 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
             <button
               type="submit"
               className="rounded-lg bg-[#9EFF00] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
+              disabled={isSubmitting}
             >
-              {buttonText}
+              {isSubmitting ? "Submitting..." : buttonText}
             </button>
           </div>
         </form>
+        {submissionSuccess === true && (
+          <p className="mt-4 text-green-500">
+            Your message was sent successfully!
+          </p>
+        )}
+        {submissionSuccess === false && (
+          <p className="mt-4 text-red-500">
+            Failed to send your message. Please try again.
+          </p>
+        )}
       </div>
     </div>
   );

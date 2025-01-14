@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import tailwindcss from "@tailwindcss/typography";
 import daisyui from "daisyui";
 
