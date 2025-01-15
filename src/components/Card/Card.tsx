@@ -18,7 +18,7 @@ export default function Card({ icon, title, description, button }: CardProps) {
     });
   return (
     <div
-      className={`flex flex-col justify-between border-b border-r border-solid border-neutral-800 p-[50px] max-laptop:w-[426.67px] max-laptop:p-10 max-mobile:w-[358px] max-mobile:border-y max-mobile:p-[30px] ${
+      className={`flex flex-col justify-between border-solid border-neutral-800 p-[50px] max-laptop:w-[426.67px] max-laptop:p-10 max-mobile:w-[358px] max-mobile:border-y max-mobile:p-[30px] sm:border-b sm:border-r ${
         button
           ? "h-[577px] max-laptop:h-[510px] max-mobile:h-[344px]"
           : "h-auto"
