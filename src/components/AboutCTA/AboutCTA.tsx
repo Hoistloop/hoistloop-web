@@ -35,7 +35,7 @@ export default function AboutCTA({
         </div>
       </div>
 
-      <div className="flex h-[111px] w-full flex-row items-center justify-between gap-5 rounded-xl border border-neutral-800 px-10 py-6 max-laptop:rounded-[10px] max-laptop:px-[30px] max-laptop:py-[20px] max-mobile:flex-col">
+      <div className="flex size-full flex-row items-center justify-between gap-4 rounded-xl border border-neutral-800 px-5 py-6 max-laptop:rounded-[10px] max-laptop:px-[30px] max-laptop:py-[20px] max-mobile:flex-col">
         <span className="text-nowrap text-center text-xl font-normal max-laptop:text-lg">
           {header}
         </span>

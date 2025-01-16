@@ -19,7 +19,6 @@ import {
   UserGroupIcon,
   UsersIcon,
 } from "@heroicons/react/20/solid";
-import FeatureTitle from "@/components/FeatureTitle";
 import ContactCTA from "@/components/ContactCTA";
 
 export default function ServicesPage() {

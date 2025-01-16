@@ -1,6 +1,6 @@
 import ContactForm from "@/components/ContactForm";
 import Hero from "@/components/Hero";
-import headerBg from "@/assets/header.png";
+import abstractBg from "@/assets/abstract.svg";
 import ContactGroup from "@/components/ContactGroup";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <>
       <Hero
-        imageUrl={headerBg}
+        imageUrl={abstractBg}
         title="Get in Touch with HoistLoop"
         subtitle="We’re here to answer your questions, discuss your needs, and explore how we can help your business thrive."
       />
@@ -35,7 +35,7 @@ export default function ContactPage() {
       />
       <ContactForm buttonText="Send Message" />
       <Hero
-        imageUrl={headerBg}
+        imageUrl={abstractBg}
         title="Frequently Asked Questions"
         subtitle="Find answers to the most common questions about our services, processes, and how we help businesses succeed."
       />
