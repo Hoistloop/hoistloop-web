@@ -58,7 +58,7 @@ export default function AboutPage() {
         imageUrl={logo}
         title="Bring Your Vision to Life"
         description="Partner with HoistLoop to build tailored solutions that drive growth. Let’s start shaping your future today."
-        button={{ text: "Start Your Project" }}
+        button={{ text: "Start Your Project", link: "/contact" }}
         header="Welcome to HoistLoop"
         subHeader="Efficient. Scalable. Transformative. Let’s make it happen together."
       />
