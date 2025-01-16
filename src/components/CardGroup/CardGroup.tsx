@@ -23,9 +23,11 @@ export default function CardGroup({ cards, columns = 3 }: CardGroupProps) {
   }, [columns]);
   return (
     <div
-      className={`grid gap-4 border-l border-t border-solid border-neutral-800`}
+      className={`grid border-solid border-neutral-800 ${currentColumns === 1 ? "gap-0 border-x" : "gap-4 border-l border-t"}`}
       style={{
         gridTemplateColumns: `repeat(${currentColumns}, minmax(0, 1fr))`,
+        maxWidth: "100%", // Ensures no overflow
+        overflow: "hidden", // Hides overflow if any item is too wide
       }}
     >
       {cards.map((card, idx) => (

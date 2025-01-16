@@ -96,16 +96,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-9 border-x border-neutral-800  py-12 max-mobile:flex-col">
-      <div className="mx-auto max-w-4xl rounded-lg border border-neutral-800  p-10">
+    <div className="flex items-center justify-center gap-9 border-x  border-neutral-800  py-12 max-mobile:flex-col">
+      <div className="mx-auto max-w-4xl p-10 md:border md:border-neutral-800  lg:rounded-lg">
         <form
           className="space-y-6"
           onSubmit={handleSubmit}
         >
           {/* Full Name and Email Fields */}
-          <div className="w-full px-3">
-            <div className=" flex flex-wrap">
-              <div className="w-full px-3 md:w-1/2">
+          <div className="w-full lg:px-3">
+            <div className="flex flex-col gap-3 lg:flex-row lg:gap-0 lg:space-x-6">
+              <div className="w-full  lg:w-1/2">
                 <div className="w-full rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
                   <label className="block text-lg font-medium text-white">
                     Full Name
@@ -124,7 +124,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
                   )}
                 </div>
               </div>
-              <div className="w-full px-3 md:w-1/2">
+              <div className="w-full lg:w-1/2 lg:px-3 ">
                 <div className="w-full rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
                   <label className="block text-lg font-medium text-white">
                     Email
@@ -145,7 +145,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
           </div>
 
           {/* Why are you contacting us? */}
-          <div className="w-full px-3">
+          <div className="w-full lg:px-3">
             <div className="rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
               <label className="block text-lg font-medium text-white">
                 How can we help your business?
@@ -153,7 +153,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
               <p className="mt-2 text-gray-400">
                 Select the services you're interested in:
               </p>
-              <div className="mt-4 grid grid-cols-2 gap-4">
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
                 {[
                   { id: "team-integration", label: "Team Integration" },
                   { id: "custom-software", label: "Custom Software" },
@@ -162,7 +162,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
                 ].map(({ id, label }) => (
                   <div
                     key={id}
-                    className="flex items-center"
+                    className="flex  flex-row items-center gap-3 md:gap-0"
                   >
                     <input
                       type="checkbox"
@@ -173,7 +173,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
                     />
                     <label
                       htmlFor={id}
-                      className="ml-2 text-gray-400"
+                      className="mt-2 text-gray-400 sm:ml-2 sm:mt-0"
                     >
                       {label}
                     </label>
@@ -184,8 +184,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
           </div>
 
           {/* Budget range */}
-          <div className="w-full px-3">
-            <div className="rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
+          <div className="w-full lg:px-3">
+            <div className="size-full rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
               <label className="block text-lg font-medium text-white">
                 Your Budget
               </label>
@@ -229,25 +229,25 @@ const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
           </div>
 
           {/* Message Field */}
-          <div className="w-full px-3">
-            <div className="rounded-lg border border-neutral-800 bg-neutral-800/50 p-6">
+          <div className="w-full lg:px-3">
+            <div className="w-full rounded-lg bg-neutral-800/50 p-6 md:border md:border-neutral-800">
               <label className="block text-lg font-medium text-white">
                 Your Message
               </label>
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="mt-2 w-full border-b border-neutral-700 bg-transparent text-base text-gray-400 placeholder:text-gray-500 focus:outline-none"
+                className="mt-2 w-full bg-transparent text-base text-gray-400 placeholder:text-gray-500 focus:outline-none md:border-b md:border-neutral-700"
                 placeholder="Type here"
               />
             </div>
           </div>
 
           {/* Submit Button */}
-          <div className="flex w-full items-center justify-center px-3">
+          <div className="flex w-full items-center justify-center lg:px-3">
             <button
               type="submit"
-              className="rounded-lg bg-[#2c70b1] font-medium text-black laptop:px-5 laptop:py-3 laptop:text-sm desktop:px-6 desktop:py-4 desktop:text-lg"
+              className="w-full rounded-lg bg-[#2c70b1] py-3 text-sm font-medium text-black sm:w-auto sm:px-5 sm:py-3 sm:text-sm md:px-6 md:py-4 md:text-lg"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : buttonText}
