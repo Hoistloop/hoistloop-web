@@ -1,16 +1,57 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-
-import BrandsSection, { BrandsProps } from "./BrandsSection";
+import { FaAws, FaReact, FaNodeJs, FaPhp } from "react-icons/fa";
+import { RiNextjsLine } from "react-icons/ri";
+import BrandsSection, { Brand } from "./BrandsSection";
 
 describe("components/BrandsSection", () => {
   test("renders brands correctly", () => {
-    const brands: BrandsProps["brands"] = [
-      { type: "FaAws", size: 40, color: "##E6E6E6" },
-      { type: "FaReact", size: 40, color: "##E6E6E6" },
-      { type: "FaNode", size: 40, color: "##E6E6E6" },
-      { type: "RiNextjsLine", size: 40, color: "##E6E6E6" },
-      { type: "FaPhp", size: 40, color: "##E6E6E6" },
+    const brands: Brand[] = [
+      {
+        icon: (
+          <FaAws
+            size={40}
+            color="#E6E6E6"
+          />
+        ),
+        type: "aws",
+      },
+      {
+        icon: (
+          <FaReact
+            size={40}
+            color="#E6E6E6"
+          />
+        ),
+        type: "react",
+      },
+      {
+        icon: (
+          <FaNodeJs
+            size={40}
+            color="#E6E6E6"
+          />
+        ),
+        type: "nodejs",
+      },
+      {
+        icon: (
+          <RiNextjsLine
+            size={40}
+            color="#E6E6E6"
+          />
+        ),
+        type: "nextjs",
+      },
+      {
+        icon: (
+          <FaPhp
+            size={40}
+            color="#E6E6E6"
+          />
+        ),
+        type: "php",
+      },
     ];
 
     render(<BrandsSection brands={brands} />);

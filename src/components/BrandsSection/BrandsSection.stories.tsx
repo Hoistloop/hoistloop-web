@@ -24,6 +24,7 @@ const brands: Brand[] = [
         color="#E6E6E6"
       />
     ),
+    type: "aws",
   },
   {
     icon: (
@@ -32,6 +33,7 @@ const brands: Brand[] = [
         color="#E6E6E6"
       />
     ),
+    type: "react",
   },
   {
     icon: (
@@ -40,6 +42,7 @@ const brands: Brand[] = [
         color="#E6E6E6"
       />
     ),
+    type: "nodejs",
   },
   {
     icon: (
@@ -48,6 +51,7 @@ const brands: Brand[] = [
         color="#E6E6E6"
       />
     ),
+    type: "nextjs",
   },
   {
     icon: (
@@ -56,6 +60,7 @@ const brands: Brand[] = [
         color="#E6E6E6"
       />
     ),
+    type: "php",
   },
 ];
 

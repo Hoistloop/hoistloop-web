@@ -1,7 +1,10 @@
+import React from "react";
+
 export interface Brand {
   icon: React.ReactNode;
   size?: number;
   color?: string;
+  type: string;
 }
 export interface BrandsProps {
   brands: Array<Brand>;
@@ -19,7 +22,11 @@ const BrandsSection: React.FC<BrandsProps> = ({ brands }) => {
             key={index}
             className="flex items-center justify-center p-4"
           >
-            {brand.icon}
+            {React.cloneElement(brand.icon as React.ReactElement, {
+              "size": brand.size,
+              "color": brand.color,
+              "aria-label": `icon-${brand.type}`, // Añadir aria-label
+            })}
           </div>
         );
       })}
