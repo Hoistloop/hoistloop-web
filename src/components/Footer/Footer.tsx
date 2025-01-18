@@ -1,6 +1,6 @@
 // Vendor
 import { Link, useRouterState } from "@tanstack/react-router";
-import { FaLinkedin, FaInstagram, FaFacebookSquare } from "react-icons/fa";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 // Components
 import SocialIcon from "@components/SocialIcon";
