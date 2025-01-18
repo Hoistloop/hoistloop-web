@@ -20,15 +20,15 @@ export default function ContactPage() {
       <ContactGroup
         contacts={[
           {
-            text: "hello@hoistloop",
+            text: "hoistloop@gmail.com",
             icon: <MdEmail />,
           },
           {
-            text: "hello@hoistloop",
+            text: "+54 11 2409 0415",
             icon: <BsFillTelephoneFill />,
           },
           {
-            text: "Get Location",
+            text: "Argentina, Santa Fe",
             icon: <FaLocationPin />,
           },
         ]}

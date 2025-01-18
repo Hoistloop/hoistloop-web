@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ContactForm from "../ContactForm";
-import { PaintBrushIcon } from "@heroicons/react/20/solid";
 
 const meta = {
   title: "ContactForm",

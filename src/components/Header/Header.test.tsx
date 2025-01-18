@@ -1,10 +1,18 @@
 import { expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Header from "@components/Header";
+import { PartialStoryFn, StoryContext } from "@storybook/csf";
 
+import withRouter from "@components/RouterWrapper";
+const renderWithRouter = (
+  Story: PartialStoryFn,
+  context: StoryContext = { parameters: {} } as StoryContext,
+) => {
+  return render(withRouter(Story, context));
+};
 describe("components/Header", () => {
   test("render component", () => {
-    const { container } = render(
+    const { container } = renderWithRouter(() => (
       <Header
         imageUrl="imageUrl"
         title="this is a test title"
@@ -19,8 +27,8 @@ describe("components/Header", () => {
           "Media & Publishers",
           "Social Good",
         ]}
-      />,
-    );
+      />
+    ));
 
     const section = container.querySelector("section");
     expect(section).toBeDefined();

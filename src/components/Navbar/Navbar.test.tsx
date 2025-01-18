@@ -4,6 +4,7 @@ import { PartialStoryFn, StoryContext } from "@storybook/csf";
 
 import withRouter from "@components/RouterWrapper";
 import Navbar from "./Navbar";
+import routes from "@/constants/routes";
 
 const renderWithRouter = (
   Story: PartialStoryFn,
@@ -30,6 +31,12 @@ describe("Navbar withRouter Decorator", () => {
 
     fireEvent.click(button);
 
-    expect(screen.getByText("Home")).toBeDefined();
+    // Verificar que los elementos del menú móvil estén presentes
+    routes
+      .filter((route) => route.showNav)
+      .forEach((route) => {
+        const menuItem = screen.getByTestId(route.name);
+        expect(menuItem).toBeDefined();
+      });
   });
 });

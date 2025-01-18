@@ -1,4 +1,4 @@
-import { Link, useRouter } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import React from "react";
 
 export interface HeaderProps {
@@ -22,14 +22,6 @@ export default function Header({
   description,
   words,
 }: HeaderProps) {
-  const router = useRouter();
-
-  const navigate =
-    router?.navigate ||
-    (() => {
-      console.warn("Router context is missing. Navigation will not work.");
-    });
-
   return (
     <section
       className="h-[796px] w-full bg-cover bg-center pt-28 max-laptop:h-[691px] max-mobile:h-[566px] max-mobile:px-4 max-mobile:pt-20"

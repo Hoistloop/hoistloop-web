@@ -8,6 +8,8 @@ import ContactForm from "@/components/ContactForm";
 import abstractBg from "@/assets/abstract.svg";
 import logo from "@/assets/logo.svg";
 import BrandsSection from "@/components/BrandsSection";
+import { FaAws, FaNodeJs, FaPhp, FaReact } from "react-icons/fa";
+import { RiNextjsLine } from "react-icons/ri";
 
 export default function HomePage() {
   const services: CardProps[] = [
@@ -169,11 +171,46 @@ export default function HomePage() {
       />
       <BrandsSection
         brands={[
-          { type: "FaAws", size: 40, color: "##E6E6E6" },
-          { type: "FaReact", size: 40, color: "##E6E6E6" },
-          { type: "FaNodeJs", size: 40, color: "##E6E6E6" },
-          { type: "RiNextjsLine", size: 40, color: "##E6E6E6" },
-          { type: "FaPhp", size: 40, color: "##E6E6E6" },
+          {
+            icon: (
+              <FaAws
+                size={40}
+                color="##E6E6E6"
+              />
+            ),
+          },
+          {
+            icon: (
+              <FaReact
+                size={40}
+                color="##E6E6E6"
+              />
+            ),
+          },
+          {
+            icon: (
+              <FaNodeJs
+                size={40}
+                color="##E6E6E6"
+              />
+            ),
+          },
+          {
+            icon: (
+              <RiNextjsLine
+                size={40}
+                color="##E6E6E6"
+              />
+            ),
+          },
+          {
+            icon: (
+              <FaPhp
+                size={40}
+                color="##E6E6E6"
+              />
+            ),
+          },
         ]}
       />
       <Hero
